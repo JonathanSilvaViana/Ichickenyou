@@ -1,0 +1,6 @@
+brincadeira com as 5 partes da galinha
+
+1° tela: cadastrar os 5 amigos participantes todos os dados
+2° tela: cadastrar 5 ações que você gosta de fazer
+3° tela: cadastrar 5 partes da galinha escolhida
+4° tela: salvar e/ou compartilhar o resultado, preferencialmente no twitter ou whatsapp e oferecer opção de retornar ao início.

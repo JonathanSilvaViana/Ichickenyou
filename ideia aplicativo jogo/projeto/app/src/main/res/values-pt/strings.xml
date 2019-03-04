@@ -1,0 +1,515 @@
+<resources>
+    <string name="app_name">I Chicken You</string>
+    <string name="teste">funfou</string>
+
+    <!--menus de seleção-->
+
+    <string name="titlemenunames">Escolha um nome</string>
+    <string name="titlechickenparts">Escolha uma parte da galinha</string>
+    <string name="titlethingstodo">Escolha algo que você gosta de fazer</string>
+
+   <string name="a">aa</string>
+
+    <!--botões-->
+
+    <string name="bt_share_text">Compartilhar</string>
+    <string name="bt_close_text">Fechar</string>
+    <string name="bt_play_text">Play</string>
+    <string name="bt_save_text">Salvar</string>
+    <string name="bt_erase_text">Apagar</string>
+    <string name="bt_edit_text">Editar</string>
+    <string name="bt_view_text">Ver</string>
+    <string name="bt_advance_text">Avançar</string>
+    <string name="bt_back_text">Voltar</string>
+
+    <!--nomes menu slide-->
+
+    <string name="menu_home">Home</string>
+    <string name="menu_see">Consultar</string>
+    <string name="menu_rules">Normas do jogo</string>
+    <string name="menu_sobre">Sobre</string>
+    <string name="menu_sair">Sair</string>
+
+    <!--nomes labels-->
+
+    <string name="label_options">Faça suas escolhas</string>
+    <string name="label_results">Resultado:</string>
+
+    <string-array name="malenames">
+        <item>Adriano</item>
+        <item>Antonio</item>
+        <item>Tupã</item>
+        <item>Josué</item>
+        <item>Heleno</item>
+        <item>Greco</item>
+        <item>Gregorio</item>
+        <item>Abraão</item>
+        <item>Jó</item>
+        <item>Abel</item>
+        <item>Samuel</item>
+        <item>Ismael</item>
+        <item>Constantino</item>
+        <item>Abimeleque</item>
+        <item>Siquém</item>
+        <item>Gideão</item>
+        <item>Joash</item>
+        <item>Jotão</item>
+        <item>Jefté</item>
+        <item>Jessé</item>
+        <item>Sêm</item>
+        <item>Kenny</item>
+        <item>Kevin</item>
+        <item>Calvin</item>
+        <item>Israel</item>
+        <item>Túlio</item>
+        <item>Tafarel</item>
+        <item>Rudá</item>
+        <item>Átila</item>
+        <item>Rugilla</item>
+        <item>Rômulo</item>
+        <item>Rêmo</item>
+        <item>Haroldo</item>
+        <item>Jose</item>
+        <item>João</item>
+        <item>Bruce</item>
+        <item>Severino</item>
+        <item>Zéca</item>
+        <item>Robin</item>
+        <item>Robinson</item>
+        <item>Roger</item>
+        <item>Rogerio</item>
+        <item>Francisco</item>
+        <item>Carlos</item>
+        <item>Otto</item>
+        <item>Yuki</item>
+        <item>Yu</item>
+        <item>Paulo</item>
+        <item>Pedro</item>
+        <item>Levi</item>
+        <item>Louro</item>
+        <item>Rodrigo</item>
+        <item>Patrício</item>
+        <item>Lucas</item>
+        <item>Hércules</item>
+        <item>Herculano</item>
+        <item>Dionísio</item>
+        <item>Mario</item>
+        <item>Mariano</item>
+        <item>Jacarandá</item>
+        <item>Clodoaldo</item>
+        <item>Clodovil</item>
+        <item>Alex</item>
+        <item>Sandro</item>
+        <item>Luiz</item>
+        <item>Marcos</item>
+        <item>Jonathan</item>
+        <item>Adão</item>
+        <item>Adam</item>
+        <item>Jonatas</item>
+        <item>Clésio</item>
+        <item>Jean</item>
+        <item>Cornélio</item>
+        <item>Trevor</item>
+        <item>Tiago</item>
+        <item>Thiago</item>
+        <item>Jonatan</item>
+        <item>John</item>
+        <item>Vicente</item>
+        <item>Jacinto</item>
+        <item>André</item>
+        <item>Andrew</item>
+        <item>Rafael</item>
+        <item>Gabriel</item>
+        <item>Judas</item>
+        <item>Xavier</item>
+        <item>Julio</item>
+        <item>Julho</item>
+        <item>Ariel</item>
+        <item>Uri</item>
+        <item>Gerônimo</item>
+        <item>Eurico</item>
+        <item>Henry</item>
+        <item>Antonino</item>
+        <item>Henrique</item>
+        <item>Thomas</item>
+        <item>Tom</item>
+        <item>Juliano</item>
+        <item>Marciano</item>
+        <item>Marcio</item>
+        <item>Juriti</item>
+        <item>Murilo</item>
+        <item>Maurício</item>
+        <item>John</item>
+        <item>Marcelo</item>
+        <item>Claudio</item>
+        <item>Claudinei</item>
+        <item>Simão</item>
+        <item>Simon</item>
+        <item>Simeão</item>
+        <item>Habacuque</item>
+        <item>Jacó</item>
+        <item>David</item>
+        <item>Daví</item>
+        <item>Ricardo</item>
+        <item>Richard</item>
+        <item>Leandro</item>
+        <item>Roberto</item>
+        <item>Ivo</item>
+        <item>Ivan</item>
+        <item>Ronaldo</item>
+        <item>Neymar</item>
+        <item>Neimar</item>
+        <item>Vanderlei</item>
+        <item>Luis</item>
+        <item>Luiz</item>
+        <item>Flávio</item>
+        <item>Josefo</item>
+        <item>Estefáno</item>
+        <item>Bruno</item>
+        <item>Romano</item>
+        <item>Romani</item>
+        <item>Alberto</item>
+        <item>Adaufo</item>
+        <item>Adauto</item>
+        <item>Adolfo</item>
+        <item>Adelmo</item>
+        <item>Baldemar</item>
+        <item>Igor</item>
+        <item>Idris</item>
+        <item>Jack</item>
+        <item>Jackson</item>
+        <item>Dacio</item>
+        <item>Jasper</item>
+        <item>Jeovanni</item>
+        <item>Geovanni</item>
+        <item>Geraldo</item>
+        <item>Gerald</item>
+        <item>Jerald</item>
+        <item>Davison</item>
+        <item>Kael</item>
+        <item>Cain</item>
+        <item>Kain</item>
+        <item>Edimilson</item>
+        <item>Edmilson</item>
+        <item>Edilson</item>
+        <item>Adilson</item>
+        <item>Nathan</item>
+        <item>Daniel</item>
+        <item>Nathaniel</item>
+        <item>Natal</item>
+        <item>Natalicio</item>
+        <item>Fabiano</item>
+        <item>Pablo</item>
+        <item>Wagner</item>
+        <item>Steve</item>
+        <item>Steven</item>
+        <item>Yael</item>
+        <item>Yuri</item>
+        <item>Yago</item>
+        <item>Thadeu</item>
+        <item>Tadeu</item>
+        <item>Zacarias</item>
+        <item>Zaqueu</item>
+        <item>Izaque</item>
+        <item>Isaac</item>
+        <item>Issac</item>
+        <item>Felipe</item>
+        <item>Filipe</item>
+        <item>Victor</item>
+        <item>Vitor</item>
+        <item>Matheus</item>
+        <item>Mateus</item>
+        <item>Salomão</item>
+        <item>Solomon</item>
+        <item>Irineu</item>
+        <item>Rwakaikara</item>
+        <item>Ankoma</item>
+        <item>Tacito</item>
+        <item>Tácio</item>
+        <item>Tristao</item>
+        <item>Uxío</item>
+        <item>Jordão</item>
+        <item>Inacio</item>
+        <item>Ruiz</item>
+        <item>Kadonkechi</item>
+        <item>Manoel</item>
+        <item>Breno</item>
+        <item>Zumbi</item>
+        <item>Valentim</item>
+        <item>Caique</item>
+        <item>Ubiratan</item>
+        <item>Ubirajara</item>
+        <item>Iúna</item>
+        <item>Kauan</item>
+        <item>Etevaldo</item>
+        <item>Nino</item>
+        <item>Godofredo</item>
+        <item>Galliard</item>
+        <item>Gilliard</item>
+        <item>Omar</item>
+        <item>Ñamandu</item>
+        <item>Riko</item>
+        <item>Haruto</item>
+        <item>Kohei</item>
+        <item>Itsuki</item>
+    </string-array>
+
+    <string-array name="femalenames">
+        <item>Maria</item>
+        <item>Sara</item>
+        <item>Suzany</item>
+        <item>Suzana</item>
+        <item>Susana</item>
+        <item>Sora</item>
+        <item>Daniela</item>
+        <item>Adriana</item>
+        <item>Gabriela</item>
+        <item>Patricia</item>
+        <item>Hinata</item>
+        <item>Renata</item>
+        <item>Úrsula</item>
+        <item>Ana</item>
+        <item>Anna</item>
+        <item>Ane</item>
+        <item>Anne</item>
+        <item>Layane</item>
+        <item>Rayane</item>
+        <item>Delaine</item>
+        <item>Linda</item>
+        <item>Inarai</item>
+        <item>Peróla</item>
+        <item>Diana</item>
+        <item>Dádiva</item>
+        <item>Julia</item>
+        <item>Joana</item>
+        <item>Diane</item>
+        <item>Dianna</item>
+        <item>Dina</item>
+        <item>Dianne</item>
+        <item>Dayane</item>
+        <item>Daiane</item>
+        <item>Sora</item>
+        <item>Sana</item>
+        <item>Kanna</item>
+        <item>Niko</item>
+        <item>Aoi</item>
+        <item>Yui</item>
+        <item>Ichika</item>
+        <item>Araki</item>
+        <item>Himari</item>
+        <item>Kohana</item>
+        <item>Hana</item>
+        <item>Cládia</item>
+        <item>Cecília</item>
+        <item>Yidu</item>
+        <item>Yinru</item>
+        <item>Samanta</item>
+        <item>Samantha</item>
+        <item>Mei</item>
+        <item>Eva</item>
+        <item>Rosa</item>
+        <item>Julieta</item>
+        <item>Juliana</item>
+        <item>Francisca</item>
+        <item>Sophia</item>
+        <item>Sofia</item>
+        <item>Emma</item>
+        <item>Mila</item>
+        <item>Marie</item>
+        <item>Helena</item>
+        <item>Lena</item>
+        <item>Lean</item>
+        <item>Paula</item>
+        <item>Lina</item>
+        <item>Paulina</item>
+        <item>Leticia</item>
+        <item>Glaucia</item>
+        <item>Margarethe</item>
+        <item>Frieda</item>
+        <item>Bertha</item>
+        <item>Jasmin</item>
+        <item>Yasmin</item>
+        <item>Tainá</item>
+        <item>Tânia</item>
+        <item>Tina</item>
+        <item>Pedrosa</item>
+        <item>Bete</item>
+        <item>Frida</item>
+        <item>Mônica</item>
+        <item>Monique</item>
+        <item>Dominique</item>
+        <item>Penélope</item>
+        <item>Camila</item>
+        <item>Camilla</item>
+        <item>Lisa</item>
+        <item>Pietra</item>
+        <item>Salomé</item>
+        <item>Alice</item>
+        <item>Naomi</item>
+        <item>Alicia</item>
+        <item>Tia</item>
+        <item>Iva</item>
+        <item>Ivone</item>
+        <item>Ivonete</item>
+        <item>Sandra</item>
+        <item>Carmilla</item>
+        <item>Carmélia</item>
+        <item>Cornélia</item>
+        <item>Evelyn</item>
+        <item>Evelin</item>
+        <item>Christiane</item>
+        <item>Christina</item>
+        <item>Christine</item>
+        <item>Christa</item>
+        <item>Karina</item>
+        <item>Yuriko</item>
+        <item>Mayumi</item>
+        <item>Aya</item>
+        <item>Ayasa</item>
+        <item>Saya</item>
+        <item>Kiyomi</item>
+        <item>Bruna</item>
+        <item>Jéssica</item>
+        <item>Angeline</item>
+        <item>Angelina</item>
+        <item>Angelica</item>
+        <item>Angele</item>
+        <item>Angela</item>
+        <item>Magali</item>
+        <item>Flávia</item>
+        <item>Danila</item>
+        <item>Mirian</item>
+        <item>Nathália</item>
+        <item>Natalia</item>
+        <item>Thatiane</item>
+        <item>Luiza</item>
+        <item>Sônia</item>
+        <item>Sypha</item>
+        <item>Luna</item>
+        <item>Itala</item>
+        <item>Gena</item>
+        <item>Geralda</item>
+        <item>Geraldete</item>
+        <item>Gorete</item>
+        <item>Luana</item>
+        <item>Morgana</item>
+        <item>Fernanda</item>
+        <item>Vitória</item>
+        <item>Mikasa</item>
+        <item>Gabi</item>
+        <item>Sasha</item>
+        <item>Rosangela</item>
+        <item>Rose</item>
+        <item>Rosé</item>
+        <item>Rode</item>
+        <item>Lilith</item>
+        <item>Loura</item>
+        <item>Alura</item>
+        <item>Kara</item>
+        <item>Ketlyn</item>
+        <item>Annie</item>
+        <item>Cosma</item>
+        <item>Flora</item>
+        <item>Florência</item>
+        <item>Fabiana</item>
+        <item>Hortência</item>
+        <item>Gustava</item>
+        <item>Lindinalva</item>
+        <item>Antônia</item>
+        <item>Prata</item>
+        <item>Anahí</item>
+        <item>Iraci</item>
+        <item>Araci</item>
+        <item>Formosa</item>
+        <item>Ceci</item>
+        <item>Iandara</item>
+        <item>Iracema</item>
+        <item>Janaína</item>
+        <item>Jasy</item>
+        <item>Moara</item>
+        <item>Kauane</item>
+        <item>Potira</item>
+        <item>Rudá</item>
+        <item>Arruda</item>
+        <item>Tainara</item>
+    </string-array>
+
+    <string-array name="chickenparts">
+        <item>Crista</item>
+        <item>Olhos</item>
+        <item>Bico</item>
+        <item>Moela</item>
+        <item>Asa</item>
+        <item>Asas</item>
+        <item>Plumagem</item>
+        <item>Peito</item>
+        <item>Papo</item>
+        <item>Coração</item>
+        <item>Fígado</item>
+        <item>Tripas</item>
+        <item>Cabeça</item>
+        <item>Pele</item>
+        <item>Garra</item>
+        <item>Garras</item>
+        <item>Coxa</item>
+        <item>Coxas</item>
+        <item>Sobrecoxa</item>
+        <item>Sobrecoxas</item>
+        <item>Pé</item>
+        <item>Pés</item>
+    </string-array>
+
+    <string-array name="thingstodo">
+        <item>Jogar bola</item>
+        <item>Dormir</item>
+        <item>Passear</item>
+        <item>Cantar</item>
+        <item>Chorrar</item>
+        <item>Comer</item>
+        <item>Comprar</item>
+        <item>Conquistar</item>
+        <item>Beijar</item>
+        <item>Namorar</item>
+        <item>Ir ao shopping</item>
+        <item>Cochilar</item>
+        <item>Massagear</item>
+        <item>Jogar</item>
+        <item>Jogar vídeo game</item>
+        <item>Surfar</item>
+        <item>Nadar</item>
+        <item>Jogar basquete</item>
+        <item>Jogar vôlei</item>
+        <item>Bater</item>
+        <item>Conversar</item>
+        <item>Paquerar</item>
+        <item>Amar</item>
+        <item>Beber</item>
+        <item>Sair</item>
+        <item>Adoecer</item>
+        <item>Ler</item>
+        <item>Trabalhar</item>
+        <item>Estudar</item>
+        <item>Assistir</item>
+        <item>Admirar</item>
+        <item>Ajudar</item>
+        <item>Alimentar</item>
+        <item>Jantar</item>
+        <item>Almoçar</item>
+        <item>Tomar</item>
+        <item>Conquistar</item>
+        <item>Sonhar</item>
+        <item>Jogar baseball</item>
+        <item>Gritar</item>
+        <item>Mergulhar</item>
+        <item>Conhecer</item>
+        <item>Esquiar</item>
+        <item>Trollar</item>
+        <item>Brincar</item>
+        <item>Bagunçar</item>
+        <item>Organizar</item>
+        <item>Desenhar</item>
+    </string-array>
+
+
+
+</resources>
