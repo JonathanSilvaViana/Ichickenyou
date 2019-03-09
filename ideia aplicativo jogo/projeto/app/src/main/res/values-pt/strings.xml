@@ -510,6 +510,30 @@
         <item>Desenhar</item>
     </string-array>
 
+    <string-array name="chickenparts_Korean_use_only">
+
+        <item>볏</item>
+        <item>눈</item>
+        <item>부리</item>
+        <item>사낭</item>
+        <item>날개</item>
+        <item>Plumagem</item>
+        <item>가슴살</item>
+        <item>위</item>
+        <item>심장</item>
+        <item>간</item>
+        <item>Tripas</item>
+        <item>머리</item>
+        <item>피부</item>
+        <item>발톱</item>
+        <item>닭 허벅지</item>
+        <item>닭 다리</item>
+        <item>혀</item>
+        <item>발가락</item>
+        <item>닭 발</item>
+
+    </string-array>
+
 
 
 </resources>

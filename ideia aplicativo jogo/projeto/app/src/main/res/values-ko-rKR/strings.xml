@@ -4,36 +4,36 @@
 
     <!--menus de seleção-->
 
-    <string name="titlemenunames">Escolha um nome</string>
-    <string name="titlechickenparts">Escolha uma parte da galinha</string>
-    <string name="titlethingstodo">Escolha algo que você gosta de fazer</string>
+    <string name="titlemenunames">이름을 선택하십시오:</string>
+    <string name="titlechickenparts">닭고기 조각을 선택하십시오:</string>
+    <string name="titlethingstodo">무엇을 하고 싶나요?</string>
 
     <string name="a">aa</string>
 
     <!--botões-->
 
-    <string name="bt_share_text">Compartilhar</string>
-    <string name="bt_close_text">Fechar</string>
-    <string name="bt_play_text">Play</string>
-    <string name="bt_save_text">Salvar</string>
-    <string name="bt_erase_text">Apagar</string>
-    <string name="bt_edit_text">Editar</string>
-    <string name="bt_view_text">Ver</string>
-    <string name="bt_advance_text">Avançar</string>
-    <string name="bt_back_text">Voltar</string>
+    <string name="bt_share_text">공유래</string>
+    <string name="bt_close_text">닫다</string>
+    <string name="bt_play_text">플레이</string>
+    <string name="bt_save_text">저장하다</string>
+    <string name="bt_erase_text">삭제</string>
+    <string name="bt_edit_text">편집하기</string>
+    <string name="bt_view_text">전망</string>
+    <string name="bt_advance_text">다음</string>
+    <string name="bt_back_text">돌아가다</string>
 
     <!--nomes menu slide-->
 
-    <string name="menu_home">Home</string>
-    <string name="menu_see">Consultar</string>
-    <string name="menu_rules">Normas do jogo</string>
-    <string name="menu_sobre">Sobre</string>
-    <string name="menu_sair">Sair</string>
+    <string name="menu_home">홈</string>
+    <string name="menu_see">상담</string>
+    <string name="menu_rules">게임 룰</string>
+    <string name="menu_sobre">게임에 대해</string>
+    <string name="menu_sair">닫다</string>
 
     <!--nomes labels-->
 
-    <string name="label_options">Faça suas escolhas</string>
-    <string name="label_results">Resultado:</string>
+    <string name="label_options">선택을해라</string>
+    <string name="label_results">결과:</string>
 
     <string-array name="malenames">
         <item>지원</item>
@@ -98,90 +98,90 @@
         <item>재인</item>
         <item>건</item>
         <item>광희</item>
-        <item>Alex</item>
-        <item>Sandro</item>
-        <item>Luiz</item>
-        <item>Marcos</item>
-        <item>Jonathan</item>
-        <item>Adão</item>
-        <item>Adam</item>
+        <item>범석</item>
+        <item>법동</item>
+        <item>빛가람</item>
+        <item>보경</item>
+        <item>보희</item>
+        <item>백현</item>
+        <item>봉기</item>
         <item>민환</item>
         <item>민혁</item>
-        <item>Jean</item>
-        <item>Cornélio</item>
-        <item>Trevor</item>
-        <item>Tiago</item>
-        <item>Thiago</item>
-        <item>Jonatan</item>
-        <item>John</item>
-        <item>Vicente</item>
-        <item>Jacinto</item>
-        <item>André</item>
-        <item>Andrew</item>
-        <item>Rafael</item>
-        <item>Gabriel</item>
-        <item>Judas</item>
-        <item>Xavier</item>
-        <item>Julio</item>
-        <item>Julho</item>
-        <item>Ariel</item>
-        <item>Uri</item>
-        <item>Gerônimo</item>
-        <item>Eurico</item>
-        <item>Henry</item>
-        <item>Antonino</item>
-        <item>Henrique</item>
-        <item>Thomas</item>
-        <item>Tom</item>
-        <item>Juliano</item>
-        <item>Marciano</item>
-        <item>Marcio</item>
-        <item>Juriti</item>
-        <item>Murilo</item>
-        <item>Maurício</item>
-        <item>John</item>
-        <item>Marcelo</item>
-        <item>Claudio</item>
-        <item>Claudinei</item>
-        <item>Simão</item>
-        <item>Simon</item>
-        <item>Simeão</item>
-        <item>Habacuque</item>
-        <item>Jacó</item>
-        <item>David</item>
-        <item>Daví</item>
-        <item>Ricardo</item>
-        <item>Richard</item>
-        <item>Leandro</item>
-        <item>Roberto</item>
-        <item>Ivo</item>
-        <item>Ivan</item>
-        <item>Ronaldo</item>
-        <item>Neymar</item>
-        <item>Neimar</item>
-        <item>Vanderlei</item>
-        <item>Luis</item>
-        <item>Luiz</item>
-        <item>Flávio</item>
-        <item>Josefo</item>
-        <item>Estefáno</item>
-        <item>Bruno</item>
-        <item>Romano</item>
-        <item>Romani</item>
-        <item>Alberto</item>
-        <item>Adaufo</item>
-        <item>Adauto</item>
-        <item>Adolfo</item>
-        <item>Adelmo</item>
-        <item>Baldemar</item>
-        <item>Igor</item>
-        <item>Idris</item>
-        <item>Jack</item>
-        <item>Jackson</item>
-        <item>Dacio</item>
+        <item>안종</item>
+        <item>아랜</item>
+        <item>바다</item>
+        <item>백한</item>
+        <item>봉주</item>
+        <item>거인</item>
+        <item>보선</item>
+        <item>보연</item>
+        <item>철</item>
+        <item>앤드류</item>
+        <item>철수</item>
+        <item>칠현</item>
+        <item>가브리엘</item>
+        <item>유다</item>
+        <item>자비에르</item>
+        <item>도마</item>
+        <item>줄리우스</item>
+        <item>아리엘</item>
+        <item>우리</item>
+        <item>부치</item>
+        <item>치원</item>
+        <item>부친</item>
+        <item>충재</item>
+        <item>철순</item>
+        <item>대환</item>
+        <item>대정</item>
+        <item>대석</item>
+        <item>대성</item>
+        <item>대성</item>
+        <item>다현</item>
+        <item>닥현</item>
+        <item>다산</item>
+        <item>달</item>
+        <item>에이조</item>
+        <item>바트</item>
+        <item>갈리아드</item>
+        <item>마르셀</item>
+        <item>사이먼</item>
+        <item>찬열</item>
+        <item>찬솔</item>
+        <item>찬우</item>
+        <item>찬성</item>
+        <item>찬혁</item>
+        <item>창섭</item>
+        <item>창민</item>
+        <item>창균</item>
+        <item>트레버</item>
+        <item>그란티</item>
+        <item>이반</item>
+        <item>병철</item>
+        <item>석범</item>
+        <item>석진</item>
+        <item>병수</item>
+        <item>병희</item>
+        <item>코니야</item>
+        <item>레비</item>
+        <item>별</item>
+        <item>성희</item>
+        <item>윤영</item>
+        <item>윤식</item>
+        <item>호마니</item>
+        <item>서진</item>
+        <item>세훈</item>
+        <item>세호</item>
+        <item>세현</item>
+        <item>세소</item>
+        <item>석영</item>
+        <item>윤서</item>
+        <item>상철</item>
+        <item>상은</item>
+        <item>상우</item>
+        <item>상식</item>
         <item>남순</item>
-        <item>Jeovanni</item>
-        <item>Geovanni</item>
+        <item>상혁</item>
+        <item>윤호</item>
         <item>삼</item>
         <item>새벽</item>
         <item>사도</item>
@@ -404,110 +404,135 @@
         <item>라온</item>
         <item>라움</item>
         <item>루리</item>
-        <item>Alura</item>
-        <item>Kara</item>
-        <item>Ketlyn</item>
-        <item>Annie</item>
-        <item>Cosma</item>
+        <item>기</item>
+        <item>윤희</item>
+        <item>윤혜</item>
+        <item>윤형</item>
+        <item>유래</item>
         <item>샛별</item>
         <item>새별</item>
         <item>새벽</item>
         <item>새론</item>
-        <item>Gustava</item>
-        <item>Lindinalva</item>
-        <item>Antônia</item>
-        <item>Prata</item>
-        <item>Anahí</item>
+        <item>유라</item>
+        <item>삼순</item>
+        <item>삼순</item>
+        <item>산다라</item>
+        <item>세미</item>
         <item>삼</item>
         <item>새롬</item>
-        <item>Formosa</item>
-        <item>Ceci</item>
-        <item>Iandara</item>
-        <item>Iracema</item>
-        <item>Janaína</item>
-        <item>Jasy</item>
-        <item>Moara</item>
-        <item>Kauane</item>
-        <item>Potira</item>
-        <item>Rudá</item>
-        <item>Arruda</item>
-        <item>Tainara</item>
+        <item>윤영</item>
+        <item>상은</item>
+        <item>윤나</item>
+        <item>윤지</item>
+        <item>다니엘아</item>
+        <item>서향</item>
+        <item>서진</item>
+        <item>서정원</item>
+        <item>세현</item>
+        <item>석영</item>
+        <item>다니엘스</item>
+        <item>성희</item>
     </string-array>
 
+    <!--não usar esse string array mesmo na versão coreana-->
     <string-array name="chickenparts">
-        <item>Crista</item>
-        <item>Olhos</item>
-        <item>Bico</item>
-        <item>Moela</item>
-        <item>Asa</item>
+        <item>볏</item>
+        <item>눈</item>
+        <item>부리</item>
+        <item>사낭</item>
+        <item>날개</item>
         <item>Asas</item>
         <item>Plumagem</item>
-        <item>Peito</item>
-        <item>Papo</item>
-        <item>Coração</item>
-        <item>Fígado</item>
+        <item>가슴살</item>
+        <item>위</item>
+        <item>심장</item>
+        <item>간</item>
         <item>Tripas</item>
-        <item>Cabeça</item>
-        <item>Pele</item>
-        <item>Garra</item>
+        <item>머리</item>
+        <item>피부</item>
+        <item>발톱</item>
         <item>Garras</item>
-        <item>Coxa</item>
+        <item>닭 허벅지</item>
         <item>Coxas</item>
-        <item>Sobrecoxa</item>
-        <item>Sobrecoxas</item>
-        <item>Pé</item>
-        <item>Pés</item>
+        <item>닭 다리</item>
+        <item>혀</item>
+        <item>발가락</item>
+        <item>닭 발</item>
+    </string-array>
+
+    <string-array name="chickenparts_Korean_use_only">
+
+        <item>볏</item>
+        <item>눈</item>
+        <item>부리</item>
+        <item>사낭</item>
+        <item>날개</item>
+        <item>Plumagem</item>
+        <item>가슴살</item>
+        <item>위</item>
+        <item>심장</item>
+        <item>간</item>
+        <item>Tripas</item>
+        <item>머리</item>
+        <item>피부</item>
+        <item>발톱</item>
+        <item>닭 허벅지</item>
+        <item>닭 다리</item>
+        <item>혀</item>
+        <item>발가락</item>
+        <item>닭 발</item>
+
     </string-array>
 
     <string-array name="thingstodo">
-        <item>Jogar bola</item>
-        <item>Dormir</item>
-        <item>Passear</item>
-        <item>Cantar</item>
-        <item>Chorrar</item>
-        <item>Comer</item>
-        <item>Comprar</item>
-        <item>Conquistar</item>
-        <item>Beijar</item>
-        <item>Namorar</item>
-        <item>Ir ao shopping</item>
-        <item>Cochilar</item>
-        <item>Massagear</item>
-        <item>Jogar</item>
-        <item>Jogar vídeo game</item>
-        <item>Surfar</item>
-        <item>Nadar</item>
-        <item>Jogar basquete</item>
-        <item>Jogar vôlei</item>
-        <item>Bater</item>
-        <item>Conversar</item>
-        <item>Paquerar</item>
-        <item>Amar</item>
-        <item>Beber</item>
-        <item>Sair</item>
-        <item>Adoecer</item>
-        <item>Ler</item>
-        <item>Trabalhar</item>
-        <item>Estudar</item>
-        <item>Assistir</item>
-        <item>Admirar</item>
-        <item>Ajudar</item>
-        <item>Alimentar</item>
-        <item>Jantar</item>
-        <item>Almoçar</item>
-        <item>Tomar</item>
-        <item>Conquistar</item>
-        <item>Sonhar</item>
-        <item>Jogar baseball</item>
-        <item>Gritar</item>
-        <item>Mergulhar</item>
-        <item>Conhecer</item>
-        <item>Esquiar</item>
-        <item>Trollar</item>
-        <item>Brincar</item>
-        <item>Bagunçar</item>
-        <item>Organizar</item>
-        <item>Desenhar</item>
+        <item>축구해요</item>
+        <item>자요</item>
+        <item>밖에 나가요</item>
+        <item>노래요</item>
+        <item>울고있어요</item>
+        <item>먹어요</item>
+        <item>사요</item>
+        <item>정복해요</item>
+        <item>키스해요</item>
+        <item>다이트해요</item>
+        <item>쇼핑 가요</item>
+        <item>졸린해요</item>
+        <item>마사지해요</item>
+        <item>플레이해요</item>
+        <item>게임을 해요</item>
+        <item>서핑을 해요</item>
+        <item>수영해요</item>
+        <item>농구해요</item>
+        <item>배구를해요</item>
+        <item>철썩 때리다</item>
+        <item>이야기해요</item>
+        <item>유혹해요</item>
+        <item>사랑해요</item>
+        <item>마셔요</item>
+        <item>닫아요</item>
+        <item>아파요</item>
+        <item>읽어해요</item>
+        <item>일해요</item>
+        <item>공부해요</item>
+        <item>보고있어요</item>
+        <item>감탄으세요</item>
+        <item>도와해요</item>
+        <item>먹이로해요</item>
+        <item>저녁 먹래요</item>
+        <item>점심해요</item>
+        <item>가져요</item>
+        <item>다녀요</item>
+        <item>꿈 해요</item>
+        <item>야구 해요</item>
+        <item>비명 해요</item>
+        <item>다이빙을해요</item>
+        <item>발견하다</item>
+        <item>스키 타고 있어요</item>
+        <item>트롤 해요</item>
+        <item>놀아요</item>
+        <item>조직화해요</item>
+        <item>정리해요</item>
+        <item>그림 그려요</item>
     </string-array>
 
 
