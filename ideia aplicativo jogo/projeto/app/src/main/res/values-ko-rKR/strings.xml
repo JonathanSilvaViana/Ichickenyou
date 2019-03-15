@@ -7,6 +7,7 @@
     <string name="titlemenunames">이름을 선택하십시오:</string>
     <string name="titlechickenparts">닭고기 조각을 선택하십시오:</string>
     <string name="titlethingstodo">무엇을 하고 싶나요?</string>
+    <string name="menu">매뉴</string>
 
     <string name="a">aa</string>
 
@@ -535,6 +536,13 @@
         <item>그림 그려요</item>
     </string-array>
 
+    <string name="title_activity_menu">I Chicken you</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">대단한 App!</string>
+    <string name="nav_header_subtitle">데벨로페의 메일: jonathansilva@daum.net</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">설정</string>
 
 
 </resources>

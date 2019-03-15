@@ -7,20 +7,21 @@
     <string name="titlemenunames">Choose a friend\'s name:</string>
     <string name="titlechickenparts">Choose a chicen body part:</string>
     <string name="titlethingstodo">Choose something that you like to do:</string>
+    <string name="menu">Menu</string>
 
     <string name="a">aa</string>
 
     <!--botões-->
 
-    <string name="bt_share_text">Compartilhar</string>
-    <string name="bt_close_text">Fechar</string>
+    <string name="bt_share_text">Share</string>
+    <string name="bt_close_text">Close</string>
     <string name="bt_play_text">Play</string>
-    <string name="bt_save_text">Salvar</string>
-    <string name="bt_erase_text">Apagar</string>
-    <string name="bt_edit_text">Editar</string>
-    <string name="bt_view_text">Ver</string>
-    <string name="bt_advance_text">Avançar</string>
-    <string name="bt_back_text">Voltar</string>
+    <string name="bt_save_text">Save</string>
+    <string name="bt_erase_text">Erase</string>
+    <string name="bt_edit_text">Edit</string>
+    <string name="bt_view_text">View</string>
+    <string name="bt_advance_text">Advance</string>
+    <string name="bt_back_text">Return</string>
 
     <!--nomes menu slide-->
 
@@ -36,222 +37,222 @@
     <string name="label_results">Result:</string>
 
     <string-array name="malenames">
-        <item>Adriano</item>
+        <item>Adrian</item>
         <item>Antonio</item>
-        <item>Tupã</item>
-        <item>Josué</item>
+        <item>Thulius</item>
+        <item>Joseph</item>
         <item>Heleno</item>
         <item>Greco</item>
-        <item>Gregorio</item>
-        <item>Abraão</item>
-        <item>Jó</item>
-        <item>Abel</item>
+        <item>Gregory</item>
+        <item>Lincoln</item>
+        <item>Oliver</item>
+        <item>Abiel</item>
         <item>Samuel</item>
         <item>Ismael</item>
         <item>Constantino</item>
-        <item>Abimeleque</item>
-        <item>Siquém</item>
+        <item>Constantin</item>
+        <item>Sheik</item>
         <item>Gideão</item>
         <item>Joash</item>
         <item>Jotão</item>
         <item>Jefté</item>
-        <item>Jessé</item>
-        <item>Sêm</item>
+        <item>Jesseh</item>
+        <item>Jacob</item>
         <item>Kenny</item>
         <item>Kevin</item>
         <item>Calvin</item>
         <item>Israel</item>
-        <item>Túlio</item>
-        <item>Tafarel</item>
-        <item>Rudá</item>
-        <item>Átila</item>
+        <item>Noah</item>
+        <item>Charlie</item>
+        <item>Rudah</item>
+        <item>Atilla</item>
         <item>Rugilla</item>
-        <item>Rômulo</item>
-        <item>Rêmo</item>
-        <item>Haroldo</item>
-        <item>Jose</item>
-        <item>João</item>
+        <item>Romulo</item>
+        <item>Remo</item>
+        <item>Harold</item>
+        <item>Josh</item>
+        <item>John</item>
         <item>Bruce</item>
-        <item>Severino</item>
-        <item>Zéca</item>
+        <item>Bill</item>
+        <item>Ethan</item>
         <item>Robin</item>
         <item>Robinson</item>
         <item>Roger</item>
         <item>Rogerio</item>
-        <item>Francisco</item>
-        <item>Carlos</item>
+        <item>Francesco</item>
+        <item>Karl</item>
         <item>Otto</item>
         <item>Yuki</item>
         <item>Yu</item>
-        <item>Paulo</item>
-        <item>Pedro</item>
+        <item>Paul</item>
+        <item>Peter</item>
         <item>Levi</item>
-        <item>Louro</item>
-        <item>Rodrigo</item>
-        <item>Patrício</item>
-        <item>Lucas</item>
-        <item>Hércules</item>
-        <item>Herculano</item>
-        <item>Dionísio</item>
+        <item>Arlo</item>
+        <item>Harry</item>
+        <item>Oscar</item>
+        <item>Luke</item>
+        <item>William</item>
+        <item>James</item>
+        <item>Dionisius</item>
         <item>Mario</item>
-        <item>Mariano</item>
-        <item>Jacarandá</item>
-        <item>Clodoaldo</item>
-        <item>Clodovil</item>
+        <item>Alfie</item>
+        <item>Joshua</item>
+        <item>Freddie</item>
+        <item>Archie</item>
         <item>Alex</item>
-        <item>Sandro</item>
-        <item>Luiz</item>
-        <item>Marcos</item>
+        <item>Alexander</item>
+        <item>Luigui</item>
+        <item>Marck</item>
         <item>Jonathan</item>
-        <item>Adão</item>
         <item>Adam</item>
-        <item>Jonatas</item>
-        <item>Clésio</item>
+        <item>Edward</item>
+        <item>Edwardson</item>
+        <item>Max</item>
         <item>Jean</item>
-        <item>Cornélio</item>
+        <item>Cornelius</item>
         <item>Trevor</item>
-        <item>Tiago</item>
-        <item>Thiago</item>
-        <item>Jonatan</item>
-        <item>John</item>
-        <item>Vicente</item>
-        <item>Jacinto</item>
-        <item>André</item>
+        <item>Arthur</item>
+        <item>Logan</item>
+        <item>Theo</item>
+        <item>Harrison</item>
+        <item>Vicent</item>
+        <item>Tiberius</item>
+        <item>Sebastian</item>
         <item>Andrew</item>
-        <item>Rafael</item>
+        <item>Finley</item>
         <item>Gabriel</item>
-        <item>Judas</item>
+        <item>Yudah</item>
         <item>Xavier</item>
-        <item>Julio</item>
-        <item>Julho</item>
+        <item>Julius</item>
+        <item>Dylan</item>
         <item>Ariel</item>
         <item>Uri</item>
-        <item>Gerônimo</item>
-        <item>Eurico</item>
+        <item>Teddy</item>
+        <item>Theodore</item>
         <item>Henry</item>
-        <item>Antonino</item>
-        <item>Henrique</item>
+        <item>Toby</item>
+        <item>Henrich</item>
         <item>Thomas</item>
         <item>Tom</item>
-        <item>Juliano</item>
-        <item>Marciano</item>
-        <item>Marcio</item>
-        <item>Juriti</item>
-        <item>Murilo</item>
-        <item>Maurício</item>
-        <item>John</item>
-        <item>Marcelo</item>
-        <item>Claudio</item>
-        <item>Claudinei</item>
-        <item>Simão</item>
+        <item>Elijah</item>
+        <item>Reuben</item>
+        <item>Jaxon</item>
+        <item>Matthew</item>
+        <item>Harvey</item>
+        <item>Stanley</item>
+        <item>Elliott</item>
+        <item>Louis</item>
+        <item>Claude</item>
+        <item>Frederick</item>
         <item>Simon</item>
-        <item>Simeão</item>
-        <item>Habacuque</item>
-        <item>Jacó</item>
+        <item>Lewis</item>
+        <item>Blake</item>
+        <item>Rory</item>
+        <item>Ryan</item>
         <item>David</item>
-        <item>Daví</item>
-        <item>Ricardo</item>
+        <item>Tyler</item>
         <item>Richard</item>
-        <item>Leandro</item>
-        <item>Roberto</item>
-        <item>Ivo</item>
+        <item>Homero</item>
+        <item>Leonard</item>
+        <item>Robert</item>
+        <item>Dexter</item>
         <item>Ivan</item>
-        <item>Ronaldo</item>
-        <item>Neymar</item>
-        <item>Neimar</item>
-        <item>Vanderlei</item>
-        <item>Luis</item>
-        <item>Luiz</item>
-        <item>Flávio</item>
-        <item>Josefo</item>
-        <item>Estefáno</item>
+        <item>Ronald</item>
+        <item>Austin</item>
+        <item>Kai</item>
+        <item>Albie</item>
+        <item>Carter</item>
+        <item>Caleb</item>
+        <item>Flavius</item>
+        <item>Gilbert</item>
+        <item>Bobby</item>
         <item>Bruno</item>
         <item>Romano</item>
-        <item>Romani</item>
-        <item>Alberto</item>
-        <item>Adaufo</item>
-        <item>Adauto</item>
-        <item>Adolfo</item>
+        <item>Roman</item>
+        <item>Albert</item>
+        <item>Ellis</item>
+        <item>Ibrahim</item>
+        <item>Liam</item>
         <item>Adelmo</item>
-        <item>Baldemar</item>
+        <item>Jesse</item>
         <item>Igor</item>
         <item>Idris</item>
         <item>Jack</item>
         <item>Jackson</item>
-        <item>Dacio</item>
+        <item>Felix</item>
         <item>Jasper</item>
         <item>Jeovanni</item>
         <item>Geovanni</item>
-        <item>Geraldo</item>
+        <item>Faustinus</item>
         <item>Gerald</item>
-        <item>Jerald</item>
-        <item>Davison</item>
-        <item>Kael</item>
-        <item>Cain</item>
+        <item>Jamie</item>
+        <item>Tai</item>
+        <item>Jin</item>
+        <item>Tae</item>
         <item>Kain</item>
-        <item>Edimilson</item>
-        <item>Edmilson</item>
-        <item>Edilson</item>
-        <item>Adilson</item>
+        <item>Rominik</item>
+        <item>Youren</item>
+        <item>Chin</item>
+        <item>Ho</item>
         <item>Nathan</item>
         <item>Daniel</item>
         <item>Nathaniel</item>
-        <item>Natal</item>
-        <item>Natalicio</item>
-        <item>Fabiano</item>
+        <item>Milutin</item>
+        <item>Batou</item>
+        <item>Reno</item>
         <item>Pablo</item>
         <item>Wagner</item>
         <item>Steve</item>
         <item>Steven</item>
-        <item>Yael</item>
+        <item>Renon</item>
         <item>Yuri</item>
-        <item>Yago</item>
-        <item>Thadeu</item>
-        <item>Tadeu</item>
-        <item>Zacarias</item>
-        <item>Zaqueu</item>
-        <item>Izaque</item>
+        <item>Reno</item>
+        <item>Thadeus</item>
+        <item>Duke</item>
+        <item>Zachary</item>
+        <item>Zeke</item>
+        <item>Richter</item>
         <item>Isaac</item>
-        <item>Issac</item>
-        <item>Felipe</item>
-        <item>Filipe</item>
+        <item>Maxim</item>
+        <item>Philip</item>
+        <item>Adonis</item>
         <item>Victor</item>
-        <item>Vitor</item>
+        <item>Johnson</item>
         <item>Matheus</item>
-        <item>Mateus</item>
-        <item>Salomão</item>
+        <item>Mathaias</item>
+        <item>Leonardo</item>
         <item>Solomon</item>
-        <item>Irineu</item>
-        <item>Rwakaikara</item>
-        <item>Ankoma</item>
-        <item>Tacito</item>
-        <item>Tácio</item>
-        <item>Tristao</item>
+        <item>Rocky</item>
+        <item>Apollo</item>
+        <item>Roy</item>
+        <item>Dante</item>
+        <item>Tacius</item>
+        <item>Hayden</item>
         <item>Uxío</item>
-        <item>Jordão</item>
-        <item>Inacio</item>
-        <item>Ruiz</item>
-        <item>Kadonkechi</item>
+        <item>Nicolas</item>
+        <item>Chuck</item>
+        <item>Rafe</item>
+        <item>Doug</item>
         <item>Manoel</item>
-        <item>Breno</item>
-        <item>Zumbi</item>
+        <item>Peterson</item>
+        <item>George</item>
         <item>Valentim</item>
-        <item>Caique</item>
-        <item>Ubiratan</item>
-        <item>Ubirajara</item>
-        <item>Iúna</item>
-        <item>Kauan</item>
-        <item>Etevaldo</item>
+        <item>Cedrico</item>
+        <item>Marco</item>
+        <item>Achak</item>
+        <item>Reiner</item>
+        <item>Berthold</item>
+        <item>Marcel</item>
         <item>Nino</item>
-        <item>Godofredo</item>
+        <item>Adahy</item>
         <item>Galliard</item>
         <item>Gilliard</item>
         <item>Omar</item>
-        <item>Ñamandu</item>
+        <item>Bodaway</item>
         <item>Riko</item>
         <item>Haruto</item>
         <item>Kohei</item>
-        <item>Itsuki</item>
+        <item>Chaska</item>
     </string-array>
 
     <string-array name="femalenames">
@@ -413,26 +414,25 @@
         <item>Hokaratcha</item>
         <item>Helki</item>
         <item>Kabecka</item>
-        <!--segue abaixo-->
-        <item>Gustava</item>
-        <item>Lindinalva</item>
-        <item>Antônia</item>
-        <item>Prata</item>
+        <item>Nimani</item>
+        <item>Hyo Seong</item>
+        <item>Ellie</item>
+        <item>Silvina</item>
         <item>Anahí</item>
-        <item>Iraci</item>
-        <item>Araci</item>
+        <item>Kriesha</item>
+        <item>Gabi</item>
         <item>Formosa</item>
-        <item>Ceci</item>
-        <item>Iandara</item>
-        <item>Iracema</item>
-        <item>Janaína</item>
+        <item>Mina</item>
+        <item>Sandara</item>
+        <item>In Kyung</item>
+        <item>Min Ji</item>
         <item>Jasy</item>
-        <item>Moara</item>
-        <item>Kauane</item>
-        <item>Potira</item>
-        <item>Rudá</item>
-        <item>Arruda</item>
-        <item>Tainara</item>
+        <item>Hyeong Seo</item>
+        <item>Min Jung</item>
+        <item>Chae</item>
+        <item>Ji Min</item>
+        <item>Roseby</item>
+        <item>Ji Soo</item>
     </string-array>
 
     <string-array name="chickenparts">
@@ -534,11 +534,12 @@
         <item>organize</item>
         <item>to draw</item>
     </string-array>
-    <string name="title_activity_menu">MenuActivity</string>
+
+    <string name="title_activity_menu">I Chicken you</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Awesome App!</string>
+    <string name="nav_header_subtitle">Developer: jonathansilva@daum.net</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 

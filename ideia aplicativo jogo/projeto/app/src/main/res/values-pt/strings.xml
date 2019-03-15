@@ -7,6 +7,7 @@
     <string name="titlemenunames">Escolha um nome</string>
     <string name="titlechickenparts">Escolha uma parte da galinha</string>
     <string name="titlethingstodo">Escolha algo que você gosta de fazer</string>
+    <string name="menu">Menu</string>
 
    <string name="a">aa</string>
 
@@ -534,6 +535,12 @@
 
     </string-array>
 
-
+    <string name="title_activity_menu">I Chicken you</string>
+    <string name="navigation_drawer_open">Abrir menu de navegação</string>
+    <string name="navigation_drawer_close">Fechar menu de navegação</string>
+    <string name="nav_header_title">App incrível!</string>
+    <string name="nav_header_subtitle">Desenvolvedor: jonathansilva@daum.net</string>
+    <string name="nav_header_desc">Cabeçalho</string>
+    <string name="action_settings">Configurações</string>
 
 </resources>
