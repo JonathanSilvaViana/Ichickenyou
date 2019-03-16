@@ -11,6 +11,8 @@
 
     <string name="a">aa</string>
 
+    <string name="sobre_texto">Aplicativo com finalizade de apresentação de trabalho de conclusão de curso na Universidade Estácio de Sá Polo Paraíso de São Paulo, para a obtenção do título de bacharel em Sistemas de Informação. A ideia deste aplicativo foi tornar uma brincadeira brasileira um jogo contemporâneo, eternizando uma brincadeira cultural.</string>
+
     <!--botões-->
 
     <string name="bt_share_text">공유래</string>
@@ -468,7 +470,7 @@
         <item>부리</item>
         <item>사낭</item>
         <item>날개</item>
-        <item>Plumagem</item>
+        <item>깃털들</item>
         <item>가슴살</item>
         <item>위</item>
         <item>심장</item>
@@ -536,12 +538,12 @@
         <item>그림 그려요</item>
     </string-array>
 
-    <string name="title_activity_menu">I Chicken you</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_menu">아이 친킨 우</string>
+    <string name="navigation_drawer_open">탐색 창 열기</string>
+    <string name="navigation_drawer_close">탐색 창 닫기</string>
     <string name="nav_header_title">대단한 App!</string>
     <string name="nav_header_subtitle">데벨로페의 메일: jonathansilva@daum.net</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_desc">탐색 헤더</string>
     <string name="action_settings">설정</string>
 
 
