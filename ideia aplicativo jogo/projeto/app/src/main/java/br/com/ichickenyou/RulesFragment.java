@@ -1,27 +1,31 @@
 package br.com.ichickenyou;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import static br.com.ichickenyou.BuildConfig.APPLICATION_ID;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link RulesFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link RulesFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class RulesFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    Switch aceitaounao;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -58,13 +62,77 @@ public class RulesFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_rules, container, false);
+        return inflater.inflate(R.layout.fragment_rules, null, false);
+
+
+
+
+    }
+
+
+    //método construtor de ações na view do fragment
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+        //para finalidade de teste
+        //Toast.makeText(getContext(), "aa", Toast.LENGTH_SHORT).show();
+
+        final Switch aceitaounao = (Switch) view.findViewById(R.id.toggleButton);
+
+
+        //essa função permite o aceite das regras que constituem o aplicativo
+        aceitaounao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(aceitaounao.isChecked())
+                {
+
+                    //agradece o uso do aplicativo em três idiomas distintos
+                    String aceitou = getResources().getString(R.string.grato);
+                    Toast.makeText(getContext(), aceitou, Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+
+                    //agradece o uso e solicita a desinstalação avisando em três idiomas distintos
+                    String recusou = getResources().getString(R.string.aindasimgrato);
+                    Toast.makeText(getContext(), recusou, Toast.LENGTH_LONG).show();
+
+                    //tempo de transição da função de desinstalar o aplicativo
+                    int tempo_encerramento = 3000;
+                    //posiciona a ação de troca de intents
+                    Handler posicionador = new Handler();
+
+
+                    //desinstala o aplicativo em caso de recusa das regras
+
+                    posicionador.postDelayed(new Runnable() {
+
+                        public void run() {
+                            //A string packagename recebe o id da aplicação e logo a converte para uma string
+                            String nomedopacote = APPLICATION_ID.toString();
+                            //concatena a indicação de pacote com a string packagename gerando um endereço de aplicação válida
+                            Uri packageUri = Uri.parse("package:" + nomedopacote);
+                            Intent uninstallIntent =
+                                    new Intent(Intent.ACTION_DELETE, packageUri); //compatível para todas edições do android
+                            startActivity(uninstallIntent);
+                        }
+                    }, tempo_encerramento);
+
+                }
+            }
+        });
+
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -83,7 +151,10 @@ public class RulesFragment extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
+
     }
+
+
 
     @Override
     public void onDetach() {

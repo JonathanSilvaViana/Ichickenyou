@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="#fff"
     android:layout_height="match_parent">
 
 
@@ -31,6 +32,7 @@
         android:verticalScrollbarPosition="left"
         android:fontFamily="@font/indieflower"
         android:enabled="true"
+        android:background="#fff"
         android:layout_marginLeft="45dp"
         android:layout_marginRight="45dp"
         android:textOn="@string/aceito"

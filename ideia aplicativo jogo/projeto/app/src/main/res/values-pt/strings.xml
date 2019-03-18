@@ -548,6 +548,8 @@
     <string name="termos">Aceita os termos?</string>
     <string name="aceito">Aceito</string>
     <string name="recuso">Recuso</string>
+    <string name="grato">Obrigado!</string>
+    <string name="aindasimgrato">Agrademos, por gentileza desinstale esse aplicativo.</string>
 
     <string-array name="therules">
         <item>1 - Use esse aplicativo com a finalidade de se divertir com seus amigo(s) ou sozinho(a).</item>

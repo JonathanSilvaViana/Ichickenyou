@@ -12,7 +12,7 @@
 
     <string name="a">aa</string>
 
-    <string name="sobre_texto">Aplicativo com finalizade de apresentação de trabalho de conclusão de curso na Universidade Estácio de Sá Polo Paraíso de São Paulo, para a obtenção do título de bacharel em Sistemas de Informação. A ideia deste aplicativo foi tornar uma brincadeira brasileira um jogo contemporâneo, eternizando uma brincadeira cultural.</string>
+    <string name="sobre_texto">이 앱은 정보 시스템 학사 학위 취득을 목적으로 만들어졌습니다, 대학 Universidade Estácio de Sá Polo Paraíso de São Paulo에게서 최종 논문 네이고. 앱의 아이디어는 문화적인 것들을 브라질의 농담 있습니다.</string>
 
     <!--botões-->
 
@@ -548,7 +548,9 @@
     <string name="action_settings">설정</string>
     <string name="termos">이 앱의 약관에 동의하십니까?</string>
     <string name="aceito">동의해요</string>
-    <string name="recuso">Recuso</string>
+    <string name="recuso">거절할게</string>
+    <string name="grato">고마워요!</string>
+    <string name="aindasimgrato">고맙지만 이 앱은 프로그램을 제거하십시오.</string>
 
     <string-array name="therules">
         <item>1 - 이 응용 프로그램을 사용하여 친구와 함께 또는 혼자 재미있게 즐기십시오.</item>
@@ -556,9 +558,9 @@
         <item>3 - 개발자 및 법적 소유자와 상담하지 않고 이 프로젝트를 복사하거나 자신의 프로젝트를 만들지 마세요.</item>
         <item>4 - 이 프로젝트의 기반이 된 문화를 훼손하지 마십시오.</item>
         <item>5 - 프로젝트와 관련된 제안 사항은 현재 Google Playstore로 알려진 Google / Alphabet 앱 스토어에 댓글을 달아야 합니다.</item>
-        <item>6 - É permitido toda e qualquer divulgação do aplicativo desde que não seja denegrido, seja pela propagação ou por terceiros.</item>
-        <item>7 - Lembre-se que tudo que for resultado do uso deste aplicativo é uma brincadeira sutil, sem a proposição de qualquer ideia contrária ou ofensiva.</item>
-        <item>8 - O usuário final é o responsável por todos resultados que tenha utilizado neste aplicativo.</item>
+        <item>6 - 전파 또는 제 3 자에 의해이 앱 그의 개념을 폄하(가치를 깍아내림)하지 않는다면 모든 애플리케이션의 선전(광고)은 허용됩니다.</item>
+        <item>7 - 어떠한 의견의 대립이나 (상대방을) 불쾌하게 하려는 의도라고 할 것도 없이 이 앱을 사용해서 결과적으로 얻을 수 있는 건 가치없는 이야기들 뿐 이라는 걸 알아둬합니다.</item>
+        <item>8 - 최종 사용자는 이 응용 프로그램에서 사용된 모든 결과에 대하여 고유한 법적 책임이 있습니다.</item>
     </string-array>
 
 </resources>

@@ -5,7 +5,7 @@
     <!--menus de seleção-->
 
     <string name="titlemenunames">Choose a friend\'s name:</string>
-    <string name="titlechickenparts">Choose a chicen body part:</string>
+    <string name="titlechickenparts">Choose a chicken body part:</string>
     <string name="titlethingstodo">Choose something that you like to do:</string>
     <string name="menu">Menu</string>
     <string name="genders">Which gender is applicable to your friend(s)?</string>
@@ -548,6 +548,8 @@
     <string name="termos">Do you agree the rules below?</string>
     <string name="aceito">I agree</string>
     <string name="recuso">I refuse</string>
+    <string name="grato">Thanks!</string>
+    <string name="aindasimgrato">thanks, please uninstall this application.</string>
 
     <string-array name="therules">
         <item>1 - Use this application for fun with your friend(s) or alone.</item>
