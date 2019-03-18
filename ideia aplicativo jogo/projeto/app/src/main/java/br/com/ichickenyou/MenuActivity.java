@@ -129,6 +129,8 @@ public class MenuActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_regras) {
 
+            fragment = new RulesFragment();
+
         } else if (id == R.id.nav_sobre) {
 
             fragment = new AboutFragment();

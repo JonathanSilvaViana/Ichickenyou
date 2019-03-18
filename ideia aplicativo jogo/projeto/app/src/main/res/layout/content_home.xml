@@ -6,6 +6,7 @@
     android:orientation="vertical"
     >
 
+
     <TextView
         android:id="@+id/titleAbout"
         android:layout_width="match_parent"
@@ -24,10 +25,12 @@
         android:src="@drawable/home_img_fundo_branco" />
 
     <Button
+        android:padding="17dp"
         android:id="@+id/button"
-        android:layout_width="270dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginTop="300dp"
         android:background="@drawable/button_play"
         android:fontFamily="@font/looneytunes"
@@ -40,5 +43,7 @@
         android:textColor="#FFFFFF"
         android:textFontWeight="bolder"
         android:textSize="30sp" />
+
+
 
 </RelativeLayout>

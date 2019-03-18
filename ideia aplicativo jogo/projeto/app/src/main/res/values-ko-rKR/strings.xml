@@ -8,6 +8,7 @@
     <string name="titlechickenparts">닭고기 조각을 선택하십시오:</string>
     <string name="titlethingstodo">무엇을 하고 싶나요?</string>
     <string name="menu">매뉴</string>
+    <string name="genders">무슨 너 친구(들)의 성별이?</string>
 
     <string name="a">aa</string>
 
@@ -545,6 +546,19 @@
     <string name="nav_header_subtitle">데벨로페의 메일: jonathansilva@daum.net</string>
     <string name="nav_header_desc">탐색 헤더</string>
     <string name="action_settings">설정</string>
+    <string name="termos">이 앱의 약관에 동의하십니까?</string>
+    <string name="aceito">동의해요</string>
+    <string name="recuso">Recuso</string>
 
+    <string-array name="therules">
+        <item>1 - 이 응용 프로그램을 사용하여 친구와 함께 또는 혼자 재미있게 즐기십시오.</item>
+        <item>2 - 저자와 법적 소유자는 최종 사용자의 관련 작업에 대해 책임을 지지 않습니다.</item>
+        <item>3 - 개발자 및 법적 소유자와 상담하지 않고 이 프로젝트를 복사하거나 자신의 프로젝트를 만들지 마세요.</item>
+        <item>4 - 이 프로젝트의 기반이 된 문화를 훼손하지 마십시오.</item>
+        <item>5 - 프로젝트와 관련된 제안 사항은 현재 Google Playstore로 알려진 Google / Alphabet 앱 스토어에 댓글을 달아야 합니다.</item>
+        <item>6 - É permitido toda e qualquer divulgação do aplicativo desde que não seja denegrido, seja pela propagação ou por terceiros.</item>
+        <item>7 - Lembre-se que tudo que for resultado do uso deste aplicativo é uma brincadeira sutil, sem a proposição de qualquer ideia contrária ou ofensiva.</item>
+        <item>8 - O usuário final é o responsável por todos resultados que tenha utilizado neste aplicativo.</item>
+    </string-array>
 
 </resources>

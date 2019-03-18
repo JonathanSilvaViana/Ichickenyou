@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/titleAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textFontWeight="bold"
+        android:fontFamily="@font/looneytunes"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:text="@string/menu_rules" />
+
+    <ImageView
+        android:layout_marginTop="70dp"
+        android:id="@+id/imgsobre"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/livro_de_regras_final" />
+
+
+    <Switch
+        android:id="@+id/toggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="290dp"
+        android:text="@string/termos"
+        android:verticalScrollbarPosition="left"
+        android:fontFamily="@font/indieflower"
+        android:enabled="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:textOn="@string/aceito"
+        android:textOff="@string/recuso"
+        android:checked="false"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ListView
+        android:id="@+id/lista_regras"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:dividerHeight="1dp"
+        android:fontFamily="@font/indieflower"
+        android:layout_marginTop="335dp"
+        android:entries="@array/therules"
+        />
+
+
+
+
+
+
+</RelativeLayout>

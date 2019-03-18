@@ -4,15 +4,16 @@
 
     <!--menus de seleção-->
 
-    <string name="titlemenunames">Escolha um nome</string>
-    <string name="titlechickenparts">Escolha uma parte da galinha</string>
-    <string name="titlethingstodo">Escolha algo que você gosta de fazer</string>
+    <string name="titlemenunames">Escolha um nome de amigo(a):</string>
+    <string name="titlechickenparts">Escolha uma parte da galinha:</string>
+    <string name="titlethingstodo">Escolha algo que você gosta de fazer:</string>
     <string name="menu">Menu</string>
+    <string name="genders">Qual o gênero de seus(as) amigos(as)?</string>
+
 
    <string name="a">aa</string>
 
-    <string name="sobre_texto">Aplicativo com finalizade de apresentação de trabalho de conclusão de curso na Universidade Estácio de Sá Polo Paraíso de São Paulo, para a obtenção do título de bacharel em Sistemas de Informação. A ideia deste aplicativo foi tornar uma brincadeira brasileira um jogo contemporâneo, eternizando uma brincadeira cultural.</string>
-
+    <string name="sobre_texto">Aplicativo com finalidade de apresentação de trabalho de conclusão de curso na Universidade Estácio de Sá Polo Paraíso de São Paulo, para a obtenção do título de bacharel em Sistemas de Informação. A ideia deste aplicativo foi tornar uma brincadeira brasileira um jogo contemporâneo, eternizando uma brincadeira cultural.</string>
     <!--botões-->
 
     <string name="bt_share_text">Compartilhar</string>
@@ -537,12 +538,26 @@
 
     </string-array>
 
-    <string name="title_activity_menu">I Chicken you</string>
+    <string name="title_activity_menu">I Chicken You</string>
     <string name="navigation_drawer_open">Abrir menu de navegação</string>
     <string name="navigation_drawer_close">Fechar menu de navegação</string>
     <string name="nav_header_title">App incrível!</string>
     <string name="nav_header_subtitle">Desenvolvedor: jonathansilva@daum.net</string>
     <string name="nav_header_desc">Cabeçalho</string>
     <string name="action_settings">Configurações</string>
+    <string name="termos">Aceita os termos?</string>
+    <string name="aceito">Aceito</string>
+    <string name="recuso">Recuso</string>
+
+    <string-array name="therules">
+        <item>1 - Use esse aplicativo com a finalidade de se divertir com seus amigo(s) ou sozinho(a).</item>
+        <item>2 - O autor do aplicativo e os proprietários legais não responsabilizam pelas ações do usuário final.</item>
+        <item>3 - Não crie cópias desse projeto sem antes consultar o desenvolvedor e/ou os detentores dos direitos autorais do mesmo, seja original e crie seu próprio projeto.</item>
+        <item>4 - Não subjulgue a cultura da qual esse projeto foi baseado.</item>
+        <item>5 - Todas sugestões que se refiram ao projeto devem ser comentados na loja de aplicativos do Google/Alphabet, a conhecida atualmente como Google Playstore.</item>
+        <item>6 - É permitido toda e qualquer divulgação do aplicativo desde que não seja denegrido, seja pela propagação ou por terceiros.</item>
+        <item>7 - Lembre-se que tudo que for resultado do uso deste aplicativo é uma brincadeira sutil, sem a proposição de qualquer ideia contrária ou ofensiva.</item>
+        <item>8 - O usuário final é o responsável por todos resultados que tenha utilizado neste aplicativo.</item>
+    </string-array>
 
 </resources>
