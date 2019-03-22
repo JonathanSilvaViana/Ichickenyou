@@ -1,6 +1,8 @@
 package br.com.ichickenyou;
 
 import android.content.Context;
+import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +12,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -18,6 +21,8 @@ public class HomeFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static int SPLASH_TIME_OUT = 140;
+    MediaPlayer mp;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -76,6 +81,35 @@ public class HomeFragment extends Fragment {
                         .setAction("Action", null).show();
             }
         });
+
+
+
+
+        //botão de iniciar jogo
+        Button play = (Button)view.findViewById(R.id.button);
+
+        //evento de click sob o botão de play
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //dentro do contexto da aplicação seleciona o audio desejado
+                mp = MediaPlayer.create(getContext(), R.raw.play);
+                //ativa o som para o início de jogo
+                mp.start();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent jogocomeca = new Intent(getContext(), GenderActivity.class);
+                        startActivity(jogocomeca);
+                    }
+                }, SPLASH_TIME_OUT);
+
+
+            }
+        });
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
+    android:installLocation="preferExternal"
     package="br.com.ichickenyou">
 
     <dist:module dist:instant="true" />
@@ -12,11 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".GenderActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/genders"
+            ></activity>
         <activity
             android:name=".MenuActivity"
-            android:screenOrientation="portrait"
             android:label="@string/title_activity_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
