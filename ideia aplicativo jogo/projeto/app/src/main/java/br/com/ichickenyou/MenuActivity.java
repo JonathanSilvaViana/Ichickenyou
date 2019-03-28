@@ -1,5 +1,6 @@
 package br.com.ichickenyou;
 
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,6 +8,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -117,8 +120,38 @@ public class MenuActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_sair) {
 
-            System.exit(0);
-            finish();
+            //recebe o fragment padrão da navigation drawer
+            fragment = new HomeFragment();
+
+            //cria um menu que questiona o usuário se deseja encerrar a aplicação
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            alertDialogBuilder.setTitle(R.string.enunciado);
+            alertDialogBuilder
+                    .setMessage(R.string.querencerrar)
+                    .setCancelable(false)
+                    .setPositiveButton(R.string.fechar,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    moveTaskToBack(true);
+                                    //mata o processo
+                                    android.os.Process.killProcess(android.os.Process.myPid());
+                                    //minimiza o aplicativo similar a uma função de sair
+                                    System.exit(1);
+                                }
+                            })
+
+                    .setNegativeButton(R.string.naofechar, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                            //cancela a opção de encerramento do dialog
+                            dialog.cancel();
+                            //passa um feedback enquanto executar o teste
+                            Log.d("Não encerrou", "a navigation drawer não recebeu o encerramento");
+                        }
+                    });
+
+            AlertDialog alertDialog = alertDialogBuilder.create();
+            alertDialog.show();
 
         } else {
 

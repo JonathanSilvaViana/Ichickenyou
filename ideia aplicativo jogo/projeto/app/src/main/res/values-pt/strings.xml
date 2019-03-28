@@ -38,6 +38,12 @@
 
     <string name="label_options">Faça suas escolhas</string>
     <string name="label_results">Resultado:</string>
+    
+    <!--textos do alertdialog-->
+    <string name="enunciado">Encerrar o app?</string>
+    <string name="querencerrar">Deseja encerrar o app?</string>
+    <string name="fechar">Encerrar</string>
+    <string name="naofechar">Não encerrar</string>
 
     <string-array name="malenames">
         <item>Adriano</item>

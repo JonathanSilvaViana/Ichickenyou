@@ -16,6 +16,7 @@
         <activity android:name=".GenderActivity"
             android:screenOrientation="portrait"
             android:label="@string/genders"
+            android:parentActivityName=".MenuActivity"
             ></activity>
         <activity
             android:name=".MenuActivity"

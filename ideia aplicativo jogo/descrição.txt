@@ -11,3 +11,7 @@ https://www.wfonts.com/font/looneytunes-tilt-bt -> fonte looney tunes
 https://www.mobiletime.com.br/noticias/21/02/2018/138-milhoes-de-brasileiros-tem-celular/ -> brasileiros com celular
 https://g1.globo.com/economia/noticia/2018/08/29/brasil-tem-mais-de-208-milhoes-de-habitantes-segundo-o-ibge.ghtml -> habitantes no Brasil
 https://olhardigital.com.br/noticia/android-cresce-no-brasil-e-aumenta-distancia-para-ios-e-windows-phone/68023 -> plataforma android no Brasil
+https://www.culturainglesacuritiba.com.br/ingles-falada-mundo/ -> idioma inglês no mundo
+https://www.koreapost.com.br/tecnologia/forca-dos-jogos-coreanos-line/ -> juventude coreana em relação a jogos
+https://olhardigital.com.br/noticia/google-play-finalmente-supera-a-app-store-em-numero-de-aplicativos/46298 -> preferência a playstore ou android
+https://github.com/Joinersa/OoOAlertDialog?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=7025 --> biblioteca de alertdialog

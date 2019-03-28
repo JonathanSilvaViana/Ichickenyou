@@ -12,6 +12,12 @@
 
     <string name="a">aa</string>
 
+    <!--textos do alertdialog-->
+    <string name="enunciado">앱을 닫기?</string>
+    <string name="querencerrar">이 앱을 닫으시겠습니까?</string>
+    <string name="fechar">닫지</string>
+    <string name="naofechar">안닫지 마라</string>
+
     <string name="sobre_texto">이 앱은 정보 시스템 학사 학위 취득을 목적으로 만들어졌습니다, 대학 Universidade Estácio de Sá Polo Paraíso de São Paulo에게서 최종 논문 네이고. 앱의 아이디어는 문화적인 것들을 브라질의 농담 있습니다.</string>
 
     <!--botões-->

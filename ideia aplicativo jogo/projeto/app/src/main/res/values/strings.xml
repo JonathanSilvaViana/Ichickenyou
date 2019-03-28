@@ -14,6 +14,12 @@
 
     <string name="sobre_texto">Application for the purpose of presenting a final paper at the Estácio de Sá Polo Paraíso Universidade em São Paulo, to obtain a bachelor\'s degree in Information Systems. The idea of this application was to make a Brazilian game a contemporary game, perpetuating a cultural game.</string>
 
+    <!--textos do alertdialog-->
+    <string name="enunciado">Close this app?</string>
+    <string name="querencerrar">Do want to close this app?</string>
+    <string name="fechar">Close</string>
+    <string name="naofechar">Don\'t close</string>
+
     <!--botões-->
 
     <string name="bt_share_text">Share</string>
