@@ -6,7 +6,7 @@
 
 
     <TextView
-        android:id="@+id/titleAbout"
+        android:id="@+id/titleRules"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textFontWeight="bold"

@@ -1,11 +1,14 @@
 package br.com.ichickenyou;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.os.Handler;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -45,14 +48,15 @@ public class MainActivity extends AppCompatActivity {
         //essa variável coleta a string do idioma local que esteja no aparelho que execute a aplicação
         outros_idiomas = Locale.getDefault().getLanguage();
 
-        //executa a condicional se a idioma for Coreano, muda para um layout que possui recursos
-        // que suportam fonte asiática, tais como fontes e componentes
-        // que não estão disponíveis em todas versões do android.
+        //executa a condicional se a idioma for Coreano, muda a fonte no layout difinido no método oncreate, para uma fonte compatível com o idioma coreano.
 
         if (se_idioma_coreano == true) {
-            //define o layout da activy em coreano
-            setContentView(R.layout.activity_main_korean_layout);
-        } else {
+            TextView mainTextView = (TextView)findViewById(R.id.textView);
+            Typeface typeface = ResourcesCompat.getFont(this, R.font.koreanfont);
+            mainTextView.setTypeface(typeface);
+            mainTextView.setTextSize(43);
+        }
+        else {
             //exibe um log do sistema dizendo qual o idioma rastreado
             Log.d("IDIOMA:", outros_idiomas);
         }

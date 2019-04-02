@@ -1,22 +1,20 @@
 package br.com.ichickenyou;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.ResourcesCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.Locale;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link AboutFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link AboutFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class AboutFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,6 +24,10 @@ public class AboutFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    Typeface fonte_coreana;
+    String idioma_coreano, outros_idiomas;
+    boolean se_idioma_coreano;
 
     private OnFragmentInteractionListener mListener;
 
@@ -65,6 +67,38 @@ public class AboutFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_about, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        //mudar a fonte quando o idioma coreano estiver ativado
+
+        //variável que define a string do idioma coreano
+        idioma_coreano = "ko";
+
+        //variável boolean que define se o idioma rastreado, nesse caso encapsulado da variável "idioma_coreano", acima;
+        se_idioma_coreano = Locale.getDefault().getLanguage().equals(idioma_coreano);
+
+        //essa variável coleta a string do idioma local que esteja no aparelho que execute a aplicação
+        outros_idiomas = Locale.getDefault().getLanguage();
+
+        //inclui o método getContext para uma variável aplicável em fragments
+        Context contexto = getContext();
+
+        //se o idioma for Coreano, então aplica a fonte compatível com o idioma coreano, assim como a proporção, do contrário exibe um log para
+        if (se_idioma_coreano == true) {
+            TextView titleAbout = (TextView)view.findViewById(R.id.titleAbout);
+            Typeface typeface = ResourcesCompat.getFont(contexto, R.font.koreanfont);
+            titleAbout.setTypeface(typeface);
+            titleAbout.setTextSize(43);
+
+        } else {
+            //exibe um log do sistema dizendo qual o idioma rastreado
+            Log.d("IDIOMA:", outros_idiomas);
+        }
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    android:installLocation="preferExternal"
-    package="br.com.ichickenyou">
+    package="br.com.ichickenyou"
+    android:installLocation="preferExternal">
 
     <dist:module dist:instant="true" />
 
@@ -13,11 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GenderActivity"
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/action_settings"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".MenuActivity"
             android:screenOrientation="portrait"
+            ></activity>
+        <activity
+            android:name=".GenderActivity"
             android:label="@string/genders"
             android:parentActivityName=".MenuActivity"
-            ></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_menu"

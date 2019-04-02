@@ -43,14 +43,16 @@ public class GenderActivity extends AppCompatActivity {
         //essa variável coleta a string do idioma local que esteja no aparelho que execute a aplicação
         outros_idiomas = Locale.getDefault().getLanguage();
 
-        //executa a condicional se a idioma for Coreano, muda para um layout que possui recursos
-        // que suportam fonte asiática, tais como fontes e componentes
-        // que não estão disponíveis em todas versões do android.
+        //executa a condicional se a idioma for Coreano, muda a fonte no layout difinido no método oncreate, para uma fonte compatível com o idioma coreano.
 
         if (se_idioma_coreano == true) {
-            //define o layout da activy em coreano
-            setContentView(R.layout.activity_gender_korean_layout);
-        } else {
+            TextView textoperguntagenero = (TextView)findViewById(R.id.generosescolhatexto);
+            Typeface typeface = ResourcesCompat.getFont(this, R.font.koreanfont);
+            textoperguntagenero.setTypeface(typeface);
+            textoperguntagenero.setTextSize(43);
+
+        }
+        else {
             //exibe um log do sistema dizendo qual o idioma rastreado
             Log.d("IDIOMA:", outros_idiomas);
         }

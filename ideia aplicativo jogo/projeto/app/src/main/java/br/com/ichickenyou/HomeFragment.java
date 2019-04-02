@@ -2,6 +2,7 @@ package br.com.ichickenyou;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,11 +10,17 @@ import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.ResourcesCompat;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Locale;
 
 
 public class HomeFragment extends Fragment {
@@ -23,6 +30,13 @@ public class HomeFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private static int SPLASH_TIME_OUT = 140;
     MediaPlayer mp;
+    Intent jogocomeca, entra_configuracao;
+    Button play;
+    Typeface fonte_coreana;
+    String idioma_coreano, outros_idiomas;
+    boolean se_idioma_coreano;
+
+    FloatingActionButton bt_configuracoes;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -86,7 +100,7 @@ public class HomeFragment extends Fragment {
 
 
         //botão de iniciar jogo
-        Button play = (Button)view.findViewById(R.id.button);
+        play = (Button)view.findViewById(R.id.button);
 
         //evento de click sob o botão de play
         play.setOnClickListener(new View.OnClickListener() {
@@ -101,14 +115,55 @@ public class HomeFragment extends Fragment {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent jogocomeca = new Intent(getContext(), GenderActivity.class);
+                        jogocomeca = new Intent(getContext(), GenderActivity.class);
                         startActivity(jogocomeca);
+
                     }
                 }, SPLASH_TIME_OUT);
 
+                //getActivity().getFragmentManager().popBackStack();
+                //getActivity().finish();
+                //tentar encerrar a activity de menu
 
             }
         });
+
+        bt_configuracoes = (FloatingActionButton)view.findViewById(R.id.bt_configuracao);
+
+        bt_configuracoes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                entra_configuracao = new Intent(getContext(), SettingsActivity.class);
+                startActivity(entra_configuracao);
+            }
+        });
+
+
+        //mudar a fonte quando o idioma coreano estiver ativado
+
+        //variável que define a string do idioma coreano
+        idioma_coreano = "ko";
+
+        //variável boolean que define se o idioma rastreado, nesse caso encapsulado da variável "idioma_coreano", acima;
+        se_idioma_coreano = Locale.getDefault().getLanguage().equals(idioma_coreano);
+
+        //essa variável coleta a string do idioma local que esteja no aparelho que execute a aplicação
+        outros_idiomas = Locale.getDefault().getLanguage();
+
+        //inclui o método getContext para uma variável aplicável em fragments
+        Context contexto = getContext();
+
+        //se o idioma for Coreano, então aplica a fonte compatível com o idioma coreano, assim como a proporção, do contrário exibe um log para
+        if (se_idioma_coreano == true) {
+            TextView titleAbout = (TextView)view.findViewById(R.id.titleAbout);
+            Typeface typeface = ResourcesCompat.getFont(contexto, R.font.koreanfont);
+            titleAbout.setTypeface(typeface);
+            titleAbout.setTextSize(43);
+
+        } else {
+            //exibe um log do sistema dizendo qual o idioma rastreado
+            Log.d("IDIOMA:", outros_idiomas);
+        }
 
     }
 
@@ -137,6 +192,8 @@ public class HomeFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+
 
     /**
      * This interface must be implemented by activities that contain this

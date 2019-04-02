@@ -44,6 +44,9 @@
     <string name="querencerrar">Deseja encerrar o app?</string>
     <string name="fechar">Encerrar</string>
     <string name="naofechar">Não encerrar</string>
+    <string name="sobre_som">Som:</string>
+    <string name="no_sound">off</string>
+    <string name="off_sound">on</string>
 
     <string-array name="malenames">
         <item>Adriano</item>

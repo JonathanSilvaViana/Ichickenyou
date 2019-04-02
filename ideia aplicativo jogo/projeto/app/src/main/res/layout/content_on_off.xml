@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sobre_som"
+        android:id="@+id/texto_som"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="15sp"
+        android:fontFamily="@font/looneytunes"
+        android:textFontWeight="bolder"
+        android:textSize="25sp"
+        />
+
+    <RadioGroup
+        android:layout_marginTop="250dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/som_on"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:tag="on"
+            android:text="@string/off_sound" />
+
+        <RadioButton
+            android:id="@+id/som_off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="off"
+            android:text="@string/no_sound" />
+
+    </RadioGroup>
+
+
+    <ImageButton
+    android:id="@+id/imageButton"
+    android:layout_marginTop="400dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:background="@drawable/button_back"
+    android:tint="@android:color/white"
+    app:srcCompat="@drawable/voltar" />
+
+
+
+</RelativeLayout>

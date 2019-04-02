@@ -31,6 +31,9 @@
     <string name="bt_view_text">전망</string>
     <string name="bt_advance_text">다음</string>
     <string name="bt_back_text">돌아가다</string>
+    <string name="sobre_som">소리:</string>
+    <string name="no_sound">off</string>
+    <string name="off_sound">on</string>
 
     <!--nomes menu slide-->
 
