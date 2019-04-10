@@ -117,13 +117,10 @@ public class HomeFragment extends Fragment {
                     public void run() {
                         jogocomeca = new Intent(getContext(), GenderActivity.class);
                         startActivity(jogocomeca);
+                        //overridePendingTransition();
 
                     }
                 }, SPLASH_TIME_OUT);
-
-                //getActivity().getFragmentManager().popBackStack();
-                //getActivity().finish();
-                //tentar encerrar a activity de menu
 
             }
         });

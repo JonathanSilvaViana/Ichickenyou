@@ -3,6 +3,7 @@ package br.com.ichickenyou;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
+import static android.provider.Telephony.Mms.Part.TEXT;
 import static br.com.ichickenyou.BuildConfig.APPLICATION_ID;
 
 
@@ -96,6 +98,8 @@ public class RulesFragment extends Fragment {
 
         final Switch aceitaounao = (Switch) view.findViewById(R.id.toggleButton);
 
+        //cria a persistência de aceite de normas
+        final SharedPreferences aceite = getActivity().getSharedPreferences("ACEITE", Context.MODE_PRIVATE);
 
         //essa função permite o aceite das regras que constituem o aplicativo
         aceitaounao.setOnClickListener(new View.OnClickListener() {
@@ -104,10 +108,26 @@ public class RulesFragment extends Fragment {
                 if(aceitaounao.isChecked())
                 {
 
-                    //agradece o uso do aplicativo em três idiomas distintos
-                    String aceitou = getResources().getString(R.string.grato);
-                    Toast.makeText(getContext(), aceitou, Toast.LENGTH_SHORT).show();
+                    try {
+                        SharedPreferences.Editor editor = aceite.edit();
+                        editor.putString("regras aceitas", "aceitado");
+                        editor.putBoolean("ACEITO", aceitaounao.isChecked());
+                        editor.commit();
+
+                        Toast.makeText(getContext(), R.string.grato, Toast.LENGTH_SHORT).show();
+
+                        String aceitei = aceite.getString("regras aceitas", "aceitado");
+                        Boolean aceito = aceite.getBoolean("ACEITO", aceitaounao.isChecked());
+                        aceitaounao.setChecked(true);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(getContext(), "Erro", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
+
+
                 else
                 {
 
@@ -138,7 +158,9 @@ public class RulesFragment extends Fragment {
 
                 }
             }
+
         });
+
 
         //mudar a fonte quando o idioma coreano estiver ativado
 

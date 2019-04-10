@@ -34,12 +34,13 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.bt_certo);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, R.string.saved, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -53,6 +54,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 voltar_home = new Intent(SettingsActivity.this, MenuActivity.class);
                 startActivity(voltar_home);
+                overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
                 finish();
             }
         });

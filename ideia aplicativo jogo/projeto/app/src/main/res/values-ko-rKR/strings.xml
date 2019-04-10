@@ -9,6 +9,9 @@
     <string name="titlethingstodo">무엇을 하고 싶나요?</string>
     <string name="menu">매뉴</string>
     <string name="genders">무슨 너 친구(들)의 성별이?</string>
+    <string name="diga_amigos">너의 남사친(들) 어때요?</string>
+    <string name="diga_amigas">너의 여성 친구(들) 어때요?</string>
+    <string name="diga_amigos_e_amigas">너의 이성친구(들) 어때요?</string>
 
     <string name="a">aa</string>
 
@@ -34,6 +37,7 @@
     <string name="sobre_som">소리:</string>
     <string name="no_sound">off</string>
     <string name="off_sound">on</string>
+    <string name="saved">오케이</string>
 
     <!--nomes menu slide-->
 

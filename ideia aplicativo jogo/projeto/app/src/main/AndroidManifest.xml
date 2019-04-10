@@ -13,13 +13,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AnyGenderFriends"
+            android:parentActivityName=".GenderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FemaleFriends"
+            android:parentActivityName=".GenderActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".MaleFriends"
+            android:parentActivityName=".GenderActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SettingsActivity"
             android:label="@string/action_settings"
-            android:theme="@style/AppTheme.NoActionBar"
             android:parentActivityName=".MenuActivity"
             android:screenOrientation="portrait"
-            ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".GenderActivity"
             android:label="@string/genders"

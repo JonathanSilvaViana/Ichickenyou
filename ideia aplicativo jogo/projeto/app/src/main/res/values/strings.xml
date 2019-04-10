@@ -9,6 +9,9 @@
     <string name="titlethingstodo">Choose something that you like to do:</string>
     <string name="menu">Menu</string>
     <string name="genders">Which gender is applicable to your friend(s)?</string>
+    <string name="diga_amigos">What about your friend(s)?</string>
+    <string name="diga_amigas">What about your friend(s)?</string>
+    <string name="diga_amigos_e_amigas">What about your friend(s)?</string>
 
     <string name="a">aa</string>
 
@@ -34,6 +37,7 @@
     <string name="bt_view_text">View</string>
     <string name="bt_advance_text">Advance</string>
     <string name="bt_back_text">Return</string>
+    <string name="saved">Saved</string>
 
     <!--nomes menu slide-->
 

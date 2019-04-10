@@ -4,11 +4,14 @@
 
     <!--menus de seleção-->
 
-    <string name="titlemenunames">Escolha um nome de amigo(a):</string>
+    <string name="titlemenunames">Escolha um nome:</string>
     <string name="titlechickenparts">Escolha uma parte da galinha:</string>
     <string name="titlethingstodo">Escolha algo que você gosta de fazer:</string>
     <string name="menu">Menu</string>
     <string name="genders">Qual o gênero de seus(as) amigos(as)?</string>
+    <string name="diga_amigos">Diga sobre seu(s) amigo(s):</string>
+    <string name="diga_amigas">Diga sobre sua(s) amiga(s):</string>
+    <string name="diga_amigos_e_amigas">Diga sobre seu(as) amigo(as):</string>
 
 
    <string name="a">aa</string>
@@ -25,6 +28,7 @@
     <string name="bt_view_text">Ver</string>
     <string name="bt_advance_text">Avançar</string>
     <string name="bt_back_text">Voltar</string>
+    <string name="saved">Salvo</string>
 
     <!--nomes menu slide-->
 
