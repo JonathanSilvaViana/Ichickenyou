@@ -15,3 +15,4 @@ https://www.culturainglesacuritiba.com.br/ingles-falada-mundo/ -> idioma inglês 
 https://www.koreapost.com.br/tecnologia/forca-dos-jogos-coreanos-line/ -> juventude coreana em relação a jogos
 https://olhardigital.com.br/noticia/google-play-finalmente-supera-a-app-store-em-numero-de-aplicativos/46298 -> preferência a playstore ou android
 https://github.com/Joinersa/OoOAlertDialog?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=7025 --> biblioteca de alertdialog
+https://pt.wikipedia.org/wiki/Rup --> metodo de desenvolvimento
