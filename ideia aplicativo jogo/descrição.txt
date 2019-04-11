@@ -16,3 +16,4 @@ https://www.koreapost.com.br/tecnologia/forca-dos-jogos-coreanos-line/ -> juvent
 https://olhardigital.com.br/noticia/google-play-finalmente-supera-a-app-store-em-numero-de-aplicativos/46298 -> preferência a playstore ou android
 https://github.com/Joinersa/OoOAlertDialog?utm_source=android-arsenal.com&utm_medium=referral&utm_campaign=7025 --> biblioteca de alertdialog
 https://pt.wikipedia.org/wiki/Rup --> metodo de desenvolvimento
+https://play.google.com/store/apps/details?id=com.lovebeat.v2.quiz --> aplicativo de base
