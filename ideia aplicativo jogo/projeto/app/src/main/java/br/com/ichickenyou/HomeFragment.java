@@ -1,7 +1,9 @@
 package br.com.ichickenyou;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -11,6 +13,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.res.ResourcesCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -20,7 +23,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.util.Locale;
+
+import static br.com.ichickenyou.BuildConfig.APPLICATION_ID;
 
 
 public class HomeFragment extends Fragment {
@@ -33,9 +39,14 @@ public class HomeFragment extends Fragment {
     Intent jogocomeca, entra_configuracao;
     Button play;
     Typeface fonte_coreana;
-    String idioma_coreano, outros_idiomas;
+    String idioma_coreano, outros_idiomas, caminho_aceito;
     boolean se_idioma_coreano;
-
+    SharedPreferences aceite;
+    //tempo de transição da função de ir as regras do aplicativo
+    int tempo_encerramento = 0;
+    Fragment rulesFragment;
+    //posiciona a ação de troca de intents
+    Handler posicionador = new Handler();
     FloatingActionButton bt_configuracoes;
 
     // TODO: Rename and change types of parameters
@@ -96,41 +107,99 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-
-
         //botão de iniciar jogo
         play = (Button)view.findViewById(R.id.button);
+
+        //busca o arquivo de persistência
+        aceite = getActivity().getSharedPreferences("ACEITE", Context.MODE_PRIVATE);
+        //instancia o nome da variável gravada no arquivo de persistência
+        caminho_aceito = "ACEITO";
+        //busca o nome da variável de persistência informada tida como verdadeira
+        aceite.getBoolean(caminho_aceito, true);
 
         //evento de click sob o botão de play
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //dentro do contexto da aplicação seleciona o audio desejado
-                mp = MediaPlayer.create(getContext(), R.raw.play);
-                //ativa o som para o início de jogo
-                mp.start();
+                //verifica se o arquivo de persistência possuí a variável de aceite informada antes do evento de clique no botão de play
+                if (aceite.contains(caminho_aceito) == true)
+                {
+                    //dentro do contexto da aplicação seleciona o audio desejado
+                    mp = MediaPlayer.create(getContext(), R.raw.play);
+                    //ativa o som para o início de jogo
+                    mp.start();
 
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        jogocomeca = new Intent(getContext(), GenderActivity.class);
-                        startActivity(jogocomeca);
-                        //overridePendingTransition();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            jogocomeca = new Intent(getContext(), GenderActivity.class);
+                            startActivity(jogocomeca);
+                            //overridePendingTransition();
 
-                    }
-                }, SPLASH_TIME_OUT);
+                        }
+                    }, SPLASH_TIME_OUT);
+                }
+                else
+                {
+                    //cria um menu que questiona o usuário se deseja aceitar as regras do aplicativo caso existam, ou se prefere deixar para um momento posterior
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+                    //define o título
+                    alertDialogBuilder.setTitle(R.string.aceite_primeiro);
+                    alertDialogBuilder
+                            //define o subtítulo
+                            .setMessage(R.string.motivar)
+                            .setCancelable(false)
+                            //botão que o usuário pode deixar para decidir posteriormente
+                            .setPositiveButton(R.string.depois,
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            getActivity().moveTaskToBack(true);
+                                            //mata o processo
+                                            android.os.Process.killProcess(android.os.Process.myPid());
+                                            //minimiza o aplicativo similar a uma função de sair
+                                            System.exit(1);
+                                        }
+                                    })
+
+                            //botão que o usuário decide se quer visualizar as regras para então decidir se quer aceitar ou não as regras de uso do aplicativo
+                            .setNegativeButton(R.string.ir_regras, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+
+                                    posicionador.postDelayed(new Runnable() {
+                                                                 @Override
+                                                                 public void run() {
+                                                                     rulesFragment = new RulesFragment();
+                                                                     getActivity().getSupportFragmentManager().beginTransaction()
+                                                                             .replace(R.id.include_home_content, rulesFragment, "passa à regras")
+                                                                             .addToBackStack(null)
+                                                                             .commit();
+                                                                 }
+                                                             },
+
+                                            tempo_encerramento);
+                                }
+                            });
+
+                    //cria o componente de menu dialog
+                    AlertDialog alertDialog = alertDialogBuilder.create();
+                    //exibe o componente de menu dialog
+                    alertDialog.show();
+                }
 
             }
         });
 
+        //chama o botão de configuração
         bt_configuracoes = (FloatingActionButton)view.findViewById(R.id.bt_configuracao);
 
+        //evento de clique que inicia a classe de configuração
         bt_configuracoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //chama a classe de sconfiguração
                 entra_configuracao = new Intent(getContext(), SettingsActivity.class);
+                //inicia a classe de configuração
                 startActivity(entra_configuracao);
             }
         });

@@ -4,6 +4,7 @@
     package="br.com.ichickenyou"
     android:installLocation="preferExternal">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <dist:module dist:instant="true" />
 
     <application

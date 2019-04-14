@@ -16,15 +16,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
 
+import static android.content.Context.MODE_PRIVATE;
 import static android.provider.Telephony.Mms.Part.TEXT;
 import static br.com.ichickenyou.BuildConfig.APPLICATION_ID;
-
 
 public class RulesFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -34,12 +35,18 @@ public class RulesFragment extends Fragment {
 
     Switch aceitaounao;
     Typeface fonte_coreana;
-    String idioma_coreano, outros_idiomas;
+    String idioma_coreano, outros_idiomas, nome_do_arquivo_de_persistencia, caminho_aceito;
     boolean se_idioma_coreano;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    //tempo de transição da função de desinstalar o aplicativo e mudar fragment após mensagem de feedback agradecendo pela instalação
+    int tempo_encerramento = 2800;
+    //posiciona a ação de troca de intents
+    Handler posicionador = new Handler();
+    Fragment homeFragment;
 
     private OnFragmentInteractionListener mListener;
 
@@ -81,10 +88,9 @@ public class RulesFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_rules, null, false);
 
-
-
-
     }
+
+
 
 
     //método construtor de ações na view do fragment
@@ -92,53 +98,66 @@ public class RulesFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //encontra o botão tipo switch, que concede ao usuário a opção de aceitar ou não as regras do aplicativo
+        aceitaounao = (Switch) view.findViewById(R.id.toggleButton);
 
-        //para finalidade de teste
-        //Toast.makeText(getContext(), "aa", Toast.LENGTH_SHORT).show();
-
-        final Switch aceitaounao = (Switch) view.findViewById(R.id.toggleButton);
+        //variável que procederá o nome do arquivo de persistência
+        nome_do_arquivo_de_persistencia = "ACEITE";
 
         //cria a persistência de aceite de normas
-        final SharedPreferences aceite = getActivity().getSharedPreferences("ACEITE", Context.MODE_PRIVATE);
+        final SharedPreferences aceite = getActivity().getSharedPreferences(nome_do_arquivo_de_persistencia, Context.MODE_PRIVATE);
 
         //essa função permite o aceite das regras que constituem o aplicativo
         aceitaounao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //executa condicional quando checado
                 if(aceitaounao.isChecked())
                 {
 
                     try {
+                        //cria as configurações se o aplicativo tiver as regras aceitas, no arquivo de persistência
                         SharedPreferences.Editor editor = aceite.edit();
                         editor.putString("regras aceitas", "aceitado");
                         editor.putBoolean("ACEITO", aceitaounao.isChecked());
                         editor.commit();
 
+                        //feedback de agradecimento pelo aceite
                         Toast.makeText(getContext(), R.string.grato, Toast.LENGTH_SHORT).show();
 
+                        //inclui as normas de aceite no arquivo de persistência
                         String aceitei = aceite.getString("regras aceitas", "aceitado");
                         Boolean aceito = aceite.getBoolean("ACEITO", aceitaounao.isChecked());
                         aceitaounao.setChecked(true);
 
-                    } catch (Exception e) {
+                        //chama o fragment de home
+                        posicionador.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                homeFragment = new HomeFragment();
+                                getActivity().getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.content_rules_fragment, homeFragment, "passa à home")
+                                        .addToBackStack(null)
+                                        .commit();
+                            }
+                        },
+
+                                tempo_encerramento);
+
+                    }
+                    catch (Exception e)
+                    {
                         e.printStackTrace();
                         Toast.makeText(getContext(), "Erro", Toast.LENGTH_SHORT).show();
                     }
 
                 }
 
-
                 else
                 {
-
                     //agradece o uso e solicita a desinstalação avisando em três idiomas distintos
                     String recusou = getResources().getString(R.string.aindasimgrato);
                     Toast.makeText(getContext(), recusou, Toast.LENGTH_LONG).show();
-
-                    //tempo de transição da função de desinstalar o aplicativo
-                    int tempo_encerramento = 3000;
-                    //posiciona a ação de troca de intents
-                    Handler posicionador = new Handler();
 
 
                     //desinstala o aplicativo em caso de recusa das regras
@@ -160,6 +179,23 @@ public class RulesFragment extends Fragment {
             }
 
         });
+
+
+        //define o texto do botão de aceite ou não
+
+        //instancia o nome da variável gravada no arquivo de persistência
+        caminho_aceito = "ACEITO";
+        //busca o nome da variável de persistência informada tida como verdadeira
+        aceite.getBoolean(caminho_aceito, true);
+
+        //condição se houver variável de aceite, define o botão como marcado de aceite, se não define como contrário.
+        if (aceite.contains(caminho_aceito) == true)
+        {
+            aceitaounao.setChecked(true);
+        }
+        else {
+            aceitaounao.setChecked(false);
+        }
 
 
         //mudar a fonte quando o idioma coreano estiver ativado
@@ -188,7 +224,6 @@ public class RulesFragment extends Fragment {
             Log.d("IDIOMA:", outros_idiomas);
         }
 
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -197,6 +232,9 @@ public class RulesFragment extends Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
+
+
+
 
     @Override
     public void onAttach(Context context) {
@@ -207,7 +245,6 @@ public class RulesFragment extends Fragment {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
-
     }
 
 

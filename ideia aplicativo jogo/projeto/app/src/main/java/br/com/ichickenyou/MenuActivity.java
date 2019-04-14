@@ -122,15 +122,18 @@ public class MenuActivity extends AppCompatActivity
 
             //cria um menu que questiona o usuário se deseja encerrar a aplicação
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+            //define título ao menu
             alertDialogBuilder.setTitle(R.string.enunciado);
             alertDialogBuilder
+                    //define um enunciado
                     .setMessage(R.string.querencerrar)
                     .setCancelable(false)
+                    //define o botão de encerramento da aplicação
                     .setPositiveButton(R.string.fechar,
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     moveTaskToBack(true);
-                                    //mata o processo
+                                    //encerra o processo
                                     android.os.Process.killProcess(android.os.Process.myPid());
                                     //minimiza o aplicativo similar a uma função de sair
                                     System.exit(1);
@@ -147,7 +150,9 @@ public class MenuActivity extends AppCompatActivity
                         }
                     });
 
+            //cria o evento de chamado
             AlertDialog alertDialog = alertDialogBuilder.create();
+            //chama o evento do menu de dialogo
             alertDialog.show();
 
         } else {

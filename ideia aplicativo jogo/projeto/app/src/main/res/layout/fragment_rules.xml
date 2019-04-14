@@ -6,6 +6,7 @@
     tools:context=".RulesFragment">
 
     <include
+        android:id="@+id/content_rules_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/content_rules"

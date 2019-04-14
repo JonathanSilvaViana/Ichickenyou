@@ -12,7 +12,10 @@
     <string name="diga_amigos">Diga sobre seu(s) amigo(s):</string>
     <string name="diga_amigas">Diga sobre sua(s) amiga(s):</string>
     <string name="diga_amigos_e_amigas">Diga sobre seu(as) amigo(as):</string>
-
+    <string name="aceite_primeiro">Você precisa aceitar os termos para prosseguir.</string>
+    <string name="ir_regras">Ir</string>
+    <string name="depois">Depois</string>
+    <string name="motivar">Vamos lá:</string>
 
    <string name="a">aa</string>
 

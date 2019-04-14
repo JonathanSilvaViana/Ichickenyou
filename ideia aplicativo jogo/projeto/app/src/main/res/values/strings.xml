@@ -563,6 +563,10 @@
     <string name="recuso">I refuse</string>
     <string name="grato">Thanks!</string>
     <string name="aindasimgrato">thanks, please uninstall this application.</string>
+    <string name="aceite_primeiro">You need to agree to the game rules first.</string>
+    <string name="ir_regras">Go</string>
+    <string name="depois">Later</string>
+    <string name="motivar">let\'s go:</string>
 
     <string-array name="therules">
         <item>1 - Use this application for fun with your friend(s) or alone.</item>
