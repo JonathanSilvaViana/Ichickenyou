@@ -37,6 +37,7 @@ public class RulesFragment extends Fragment {
     Typeface fonte_coreana;
     String idioma_coreano, outros_idiomas, nome_do_arquivo_de_persistencia, caminho_aceito;
     boolean se_idioma_coreano;
+    SharedPreferences aceite;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -105,7 +106,7 @@ public class RulesFragment extends Fragment {
         nome_do_arquivo_de_persistencia = "ACEITE";
 
         //cria a persistência de aceite de normas
-        final SharedPreferences aceite = getActivity().getSharedPreferences(nome_do_arquivo_de_persistencia, Context.MODE_PRIVATE);
+        aceite = getActivity().getSharedPreferences(nome_do_arquivo_de_persistencia, Context.MODE_PRIVATE);
 
         //essa função permite o aceite das regras que constituem o aplicativo
         aceitaounao.setOnClickListener(new View.OnClickListener() {

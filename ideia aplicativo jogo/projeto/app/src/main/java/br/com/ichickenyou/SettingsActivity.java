@@ -1,7 +1,9 @@
 package br.com.ichickenyou;
 
 import android.app.ActionBar;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -15,6 +17,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,10 +26,12 @@ import java.util.Locale;
 public class SettingsActivity extends AppCompatActivity {
 
 
-    String idioma_coreano, outros_idiomas;
+    String idioma_coreano, outros_idiomas, preferencia_som;
     boolean se_idioma_coreano;
     ImageButton bt_voltar;
     public Intent voltar_home;
+    RadioButton som_on, som_off;
+    SharedPreferences som;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +86,24 @@ public class SettingsActivity extends AppCompatActivity {
             //exibe um log do sistema dizendo qual o idioma rastreado
             Log.d("IDIOMA:", outros_idiomas);
         }
+
+        //tratativa de efeitos sonoros
+
+        //encontra o item da view de som on
+        som_on = (RadioButton)findViewById(R.id.som_on);
+
+        //encontra o item da view de som off
+        som_off = (RadioButton)findViewById(R.id.som_off);
+
+        //string que serve de nome da preferência de som no app
+        preferencia_som = "Preferencia_som";
+
+        //cria o arquivo de persistência de dados referente a som
+        som = SettingsActivity.this.getSharedPreferences(preferencia_som, Context.MODE_PRIVATE);
+
+
+
+
 
     }
 
