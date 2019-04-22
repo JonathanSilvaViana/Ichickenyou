@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">아이 친킨 우</string>
     <string name="teste">했어</string>
+    <string name="meuemail">jonathansilva@daum.net</string>
+    <string name="assuntoemail">아이 친킨 우 - 결점 신고</string>
+    <string name="mensagememail">자세한 결점의 내용을 설명해주세요.</string>
+    <string name="enunciadointentbug">계속하려면 이메일 클라이언트를 선택하고 주세요</string>
 
     <!--menus de seleção-->
 

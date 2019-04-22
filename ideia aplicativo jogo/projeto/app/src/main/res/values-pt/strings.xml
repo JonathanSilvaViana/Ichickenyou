@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">I Chicken You</string>
     <string name="teste">funfou</string>
+    <string name="meuemail">jonathansilva@daum.net</string>
+    <string name="assuntoemail">I Chicken You - Bug encontrado</string>
+    <string name="mensagememail">Por gentileza, descreva detalhadamente todos detalhes do bug encontrado.</string>
+    <string name="enunciadointentbug">Escolha um cliente de e-mail para prosseguir</string>
 
     <!--menus de seleção-->
 

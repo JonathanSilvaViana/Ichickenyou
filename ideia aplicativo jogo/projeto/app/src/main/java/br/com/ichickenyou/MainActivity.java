@@ -25,9 +25,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //procura o som de abertura
         mp = MediaPlayer.create(this, R.raw.abertura);
+        //inicia o som de abertura
         mp.start();
 
+        //cria a transição da splash screen
         new Handler().postDelayed(new Runnable() {
                                       @Override
                                       public void run() {
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
                                           finish();
                                       }
                                   },
+                //encerra o tempo de exibição
                 SPLASH_TIME_OUT);
 
         //variável que define a string do idioma coreano

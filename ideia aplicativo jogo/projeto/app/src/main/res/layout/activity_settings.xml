@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/activity_settings"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".SettingsActivity">
@@ -47,12 +48,12 @@
         layout="@layout/content_on_off" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/bt_certo"
+        android:id="@+id/reportar_bug"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@drawable/certo_transparente" />
+        app:srcCompat="@drawable/reportar_bug_white" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -5,8 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.res.ResourcesCompat;
@@ -18,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,12 +30,17 @@ import java.util.Locale;
 public class SettingsActivity extends AppCompatActivity {
 
 
-    String idioma_coreano, outros_idiomas, preferencia_som;
+    String idioma_coreano, outros_idiomas, preferencia_som, com_som, sem_som, ativo, desativado, meuemail, assunto, mensagem, enunciadoIntentReportEmail;
     boolean se_idioma_coreano;
     ImageButton bt_voltar;
-    public Intent voltar_home;
+    public Intent voltar_home, bug_email_report;
+    RadioGroup asopcoes;
     RadioButton som_on, som_off;
     SharedPreferences som;
+    View acessoaviewparasnackbar;
+    private static int tempo_de_retorno = 2165;
+    FloatingActionButton bug_report_bt;
+    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +50,25 @@ public class SettingsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.bt_certo);
-        fab.setOnClickListener(new View.OnClickListener() {
+        //encontra e instancia o botão indicado para reportar bugs
+        bug_report_bt = (FloatingActionButton)findViewById(R.id.reportar_bug);
+
+        //quando o botão acima é precionado, chama o método de envio de bug via e-mail por intent
+        bug_report_bt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, R.string.saved, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+
+                reportaviaemail();
+                if(som.contains(ativo) == true && som.contains(desativado) == false) {
+                    mp = MediaPlayer.create(SettingsActivity.this, R.raw.telaazulsomwindows);
+                    mp.start();
+                } else
+                {
+                    Log.d("audio desativado", "audio desativa para tocar o som de bug");
+                }
+
             }
         });
-
 
         //localiza o botão voltar
         bt_voltar = (ImageButton)findViewById(R.id.imageButton);
@@ -89,6 +108,9 @@ public class SettingsActivity extends AppCompatActivity {
 
         //tratativa de efeitos sonoros
 
+        //encontra o content das opções
+        asopcoes = (RadioGroup)findViewById(R.id.opcoesdeaudio);
+
         //encontra o item da view de som on
         som_on = (RadioButton)findViewById(R.id.som_on);
 
@@ -101,9 +123,138 @@ public class SettingsActivity extends AppCompatActivity {
         //cria o arquivo de persistência de dados referente a som
         som = SettingsActivity.this.getSharedPreferences(preferencia_som, Context.MODE_PRIVATE);
 
+        //prepara o arquivo de persistência
+
+        asopcoes.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                //instancia o objeto de edição de SharedPreferences
+                SharedPreferences.Editor editor = som.edit();
+
+                if (checkedId == R.id.som_on)
+                {
+                    //inclui valores significativos para ativaçãpo de audio
+                    editor.putBoolean("ATIVADO", som_on.isChecked());
+                    editor.putString("Audio", "com audio");
+                    //remove as preferências conflitantes caso existam
+                    editor.remove("DESATIVADO");
+                    //aplica os procedimentos
+                    editor.apply();
+
+                    //inclui as normas de audio no arquivo de persistência
+                    com_som = som.getString("Audio ativado", "com audio");
+
+                }
+                else  if (checkedId == R.id.som_off)
+                {
+
+                    //inclui valores significativos para ativaçãpo de audio
+                    editor.putBoolean("DESATIVADO", som_off.isChecked());
+                    editor.putString("Audio", "sem audio");
+                    //remove as preferências conflitantes caso existam
+                    editor.remove("ATIVADO");
+                    //aplica os procedimentos
+                    editor.apply();
+
+                    //inclui as normas de audio no arquivo de persistência
+                    sem_som = som.getString("Audio desativado", "sem audio");
+
+                }
+                else
+                {
+                    //se nenhuma opção foi selecionada, então faz um log durante o processo de debug mencionando o fato.
+                        Log.d("Nenhum selecionado", "Nenhuma opção selecionada");
+                }
+
+            }
+        });
 
 
+        //variáveis string de caracteriação de nome para valores comparativos em busca condicional
+        ativo = "ATIVADO";
+        desativado = "DESATIVADO";
 
+        //verifica se o audio está ativado por meio de checagem no arquivos de preferências chamado preferencia_som, usando dupla checagem condicional, prevenindo de falhas no mesmo contexto.
+
+        if(som.contains(ativo) == true && som.contains(desativado) == false)
+        {
+            //se som está ativado e se estiver desativado conter false, define a opção on como selecionada
+            som_on.setChecked(true);
+        }
+        else if (som.contains(desativado) == true && som.contains(ativo) == false)
+        {
+            //se som está desativado e se estiver ativo conter false, define a opção off como selecionada
+            som_off.setChecked(true);
+        }
+        else
+        {
+            //se nenhuma opção foi definida, cria um log no debug avisando que nenhuma preferência de audio foi escolhida
+                Log.d("Sem definições de audio", "Nenhuma definição de audio");
+        }
+
+
+        //evento de feedback da opção on
+        som_on.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //acessa o elemento view da activity, para evitar depreciação em futuras versões do android
+                acessoaviewparasnackbar = findViewById(R.id.activity_settings);
+
+                //feedback de aviso
+                Snackbar.make(acessoaviewparasnackbar, R.string.saved, Snackbar.LENGTH_LONG)
+                        .show();
+
+                //retorna a activity principal após a mensagem de feedback
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //cria o intent que leva a activity principal
+                        voltar_home = new Intent(SettingsActivity.this, MenuActivity.class);
+                        //inicia o intent anterior
+                        startActivity(voltar_home);
+                        //chama e invoca os eventos de animação
+                        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+                        //encerra a activity
+                        finish();
+                    }
+                },
+                        //define o tempo de retorno após a ação do método e encerramento da activity
+                        tempo_de_retorno);
+            }
+        });
+
+        //evento de feedback da opção off
+        som_off.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //acessa o elemento view da activity
+                acessoaviewparasnackbar = findViewById(R.id.activity_settings);
+
+                //feedback de aviso
+                Snackbar.make(acessoaviewparasnackbar, R.string.saved, Snackbar.LENGTH_LONG)
+                        .show();
+
+                //retorna a activity principal após a mensagem de feedback
+
+                new Handler().postDelayed(new Runnable() {
+                                              @Override
+                                              public void run() {
+                                                  //cria o intent que leva a activity principal
+                                                  voltar_home = new Intent(SettingsActivity.this, MenuActivity.class);
+                                                  //inicia o intent anterior
+                                                  startActivity(voltar_home);
+                                                  //chama e invoca os eventos de animação
+                                                  overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+                                                  //encerra a activity
+                                                  finish();
+                                              }
+                                          },
+                        //define o tempo de retorno após a ação do método e encerramento da activity
+                        tempo_de_retorno);
+            }
+        });
 
     }
 
@@ -114,6 +265,29 @@ public class SettingsActivity extends AppCompatActivity {
 
         return false;
         //desabilitou o o botão voltar nativo do aparelho, desta forma evita erros de rotas
+    }
+
+
+    //metodo que reporta bug via e-mail por intent
+    private void reportaviaemail(){
+        //variáveis necessárias para o envio de e-mail, todas com opções de tradução
+        meuemail = getString(R.string.meuemail);
+        assunto = getString(R.string.assuntoemail);
+        String[] recipients = meuemail.split(",");
+        mensagem = getString(R.string.mensagememail);
+        enunciadoIntentReportEmail = getString(R.string.enunciadointentbug);
+
+        //chama o intent de e-mail:
+
+        //ACTION_SENDTO replace it later
+        bug_email_report = new Intent(Intent.ACTION_SENDTO);
+        bug_email_report.putExtra(Intent.EXTRA_EMAIL, meuemail);
+        bug_email_report.putExtra(Intent.EXTRA_SUBJECT, assunto);
+        bug_email_report.putExtra(Intent.EXTRA_TEXT, mensagem);
+
+        bug_email_report.setType("message/rfc822");
+        startActivity(Intent.createChooser(bug_email_report, enunciadoIntentReportEmail));
+
     }
 
 }
