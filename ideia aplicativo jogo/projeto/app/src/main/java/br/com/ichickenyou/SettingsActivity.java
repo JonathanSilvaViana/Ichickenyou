@@ -58,13 +58,18 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //chama o método para reportar bug via intent de e-mail
                 reportaviaemail();
+                //se a opção de som estiver ativada, e a opção de som desativado estiver desativada permite executar som
                 if(som.contains(ativo) == true && som.contains(desativado) == false) {
+                    //cria o player e encontra o som
                     mp = MediaPlayer.create(SettingsActivity.this, R.raw.telaazulsomwindows);
+                    //inicia o player
                     mp.start();
                 } else
                 {
-                    Log.d("audio desativado", "audio desativa para tocar o som de bug");
+                    //se a opção de audio desativado for verdadeira, então a função faz um log no aplicativo
+                    Log.d("audio desativado", "audio desativado para tocar o som de bug");
                 }
 
             }
