@@ -274,8 +274,9 @@ public class SettingsActivity extends AppCompatActivity {
 
 
     //metodo que reporta bug via e-mail por intent
-    private void reportaviaemail(){
-        //variáveis necessárias para o envio de e-mail, todas com opções de tradução
+    private void reportaviaemail()
+    {
+        //variáveis tipo coleta de string e sumário de strings necessárias para o envio de e-mail, todas com opções de tradução
         meuemail = getString(R.string.meuemail);
         assunto = getString(R.string.assuntoemail);
         String[] recipients = meuemail.split(",");
@@ -284,13 +285,18 @@ public class SettingsActivity extends AppCompatActivity {
 
         //chama o intent de e-mail:
 
-        //ACTION_SENDTO replace it later
-        bug_email_report = new Intent(Intent.ACTION_SENDTO);
+        //cria o tipo de intent
+        bug_email_report = new Intent(Intent.ACTION_SEND);
+        //inclui o e-mail destinado ao aviso do bug
         bug_email_report.putExtra(Intent.EXTRA_EMAIL, meuemail);
+        //inclui o título da mensagem que será contida no e-mail
         bug_email_report.putExtra(Intent.EXTRA_SUBJECT, assunto);
+        //inclui a instrução inicial de como compor a mensagem
         bug_email_report.putExtra(Intent.EXTRA_TEXT, mensagem);
 
+        //cria o tipo de mensagem
         bug_email_report.setType("message/rfc822");
+        //inicia o serviço do intent
         startActivity(Intent.createChooser(bug_email_report, enunciadoIntentReportEmail));
 
     }

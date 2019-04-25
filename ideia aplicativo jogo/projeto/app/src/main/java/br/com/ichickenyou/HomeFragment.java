@@ -201,6 +201,8 @@ public class HomeFragment extends Fragment {
                 entra_configuracao = new Intent(getContext(), SettingsActivity.class);
                 //inicia a classe de configuração
                 startActivity(entra_configuracao);
+                //encerra a activity
+                getActivity().finish();
             }
         });
 
