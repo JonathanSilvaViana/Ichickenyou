@@ -39,7 +39,8 @@ public class HomeFragment extends Fragment {
     Intent jogocomeca, entra_configuracao;
     Button play;
     Typeface fonte_coreana;
-    String idioma_coreano, outros_idiomas, caminho_aceito;
+    String idioma_coreano, outros_idiomas, caminho_aceito, ativo, desativado, preferencia_som;
+    SharedPreferences som;
     boolean se_idioma_coreano;
     SharedPreferences aceite;
     //tempo de transição da função de ir as regras do aplicativo
@@ -125,20 +126,25 @@ public class HomeFragment extends Fragment {
                 //verifica se o arquivo de persistência possuí a variável de aceite informada antes do evento de clique no botão de play
                 if (aceite.contains(caminho_aceito) == true)
                 {
-                    //dentro do contexto da aplicação seleciona o audio desejado
-                    mp = MediaPlayer.create(getContext(), R.raw.play);
-                    //ativa o som para o início de jogo
-                    mp.start();
+                    //inicia o metódo que está com som
+                    comSom();
 
-                    new Handler().postDelayed(new Runnable() {
+                    new Handler().postDelayed(new Runnable()
+                    {
                         @Override
-                        public void run() {
+                        public void run()
+                        {
+                            //cria o intent adquiring o contexto de onde é executado
                             jogocomeca = new Intent(getContext(), GenderActivity.class);
+                            //inicia a activity de inicio do jogo
                             startActivity(jogocomeca);
-                            //overridePendingTransition();
+                            //coleta a activity de onde o fragment é executado, e em seguida cria a animação
+                            getActivity().overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_right);
 
                         }
-                    }, SPLASH_TIME_OUT);
+                    },
+                            //executa a contagem
+                            SPLASH_TIME_OUT);
                 }
                 else
                 {
@@ -243,6 +249,32 @@ public class HomeFragment extends Fragment {
         }
     }
 
+
+    public void comSom()
+    {
+        //string que serve de nome para o arquivo de preferências
+        preferencia_som = "Preferencia_som";
+        //coleta o arquivo de preferências via a activity que mantém o fragment
+        som = getActivity().getSharedPreferences(preferencia_som, Context.MODE_PRIVATE);
+        //abaixo as strings que denotam por nome os estados contidos no arquivo de preferências
+        ativo = "ATIVADO";
+        desativado = "DESATIVADO";
+
+        //cria condicional
+        if (som.contains(ativo) == true && som.contains(desativado) == false)
+        {
+            //dentro do contexto da aplicação seleciona o audio desejado
+            mp = MediaPlayer.create(getContext(), R.raw.play);
+            //ativa o som para o início de jogo
+            mp.start();
+        }
+        else
+        {
+            //se a opção de audio desativado for verdadeira, então a função faz um log no aplicativo
+            Log.d("audio desativado", "audio desativado para tocar o som de play");
+        }
+
+    }
 
     @Override
     public void onAttach(Context context) {
