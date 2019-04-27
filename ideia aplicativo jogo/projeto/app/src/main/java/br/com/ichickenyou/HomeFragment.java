@@ -34,17 +34,15 @@ public class HomeFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private static int SPLASH_TIME_OUT = 140;
     MediaPlayer mp;
     Intent jogocomeca, entra_configuracao;
     Button play;
     Typeface fonte_coreana;
     String idioma_coreano, outros_idiomas, caminho_aceito, ativo, desativado, preferencia_som;
-    SharedPreferences som;
+    SharedPreferences som, aceite;
     boolean se_idioma_coreano;
-    SharedPreferences aceite;
     //tempo de transição da função de ir as regras do aplicativo
-    int tempo_encerramento = 0;
+    int tempo_encerramento = 0,  SPLASH_TIME_OUT = 140;
     Fragment rulesFragment;
     //posiciona a ação de troca de intents
     Handler posicionador = new Handler();
