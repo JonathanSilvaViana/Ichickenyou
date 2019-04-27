@@ -28,10 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        //procura o som de abertura
-//        mp = MediaPlayer.create(this, R.raw.abertura);
-//        //inicia o som de abertura
-//        mp.start();
+        //chama o método que aplica as preferências de som
         comSom();
 
         //cria a transição da splash screen
