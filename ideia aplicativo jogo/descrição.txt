@@ -19,3 +19,5 @@ https://pt.wikipedia.org/wiki/Rup --> metodo de desenvolvimento
 https://play.google.com/store/apps/details?id=com.lovebeat.v2.quiz --> aplicativo de base
 https://blog.kakaocorp.co.kr/656 --> logo do kakao 
 https://pt.wikipedia.org/wiki/Twitter --> logo do twitter
+https://androidexample.com/Dynamically_Create_View_Elements__-_Android_Example/index.php?view=article_discription&aid=115 --> criando elementos android
+https://stackoverflow.com/questions/10673628/implementing-onclicklistener-for-dynamically-created-buttons-in-android --> criando botões dinamicamente android de forma manual
