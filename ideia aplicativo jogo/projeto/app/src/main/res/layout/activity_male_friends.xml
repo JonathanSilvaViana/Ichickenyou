@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/activity_male_friends"
     android:layout_height="match_parent"
     tools:context=".MaleFriends">
 
@@ -24,63 +25,78 @@
     <!--android:layout_marginBottom="3dp"-->
     <!--&gt;-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:textFontWeight="bolder"
-        android:layout_marginLeft="10sp"
-        android:text="@string/titlemenunames"
-        />
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="80dp"-->
+        <!--android:textFontWeight="bolder"-->
+        <!--android:layout_marginLeft="10sp"-->
+        <!--android:text="@string/titlemenunames"-->
+        <!--/>-->
 
-    <AutoCompleteTextView
-        android:id="@+id/nome_autocomplete"
-        android:layout_width="match_parent"
-        android:completionThreshold="3"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="100dp"
-        android:layout_height="wrap_content"
-        android:text="" />
+    <!--<AutoCompleteTextView-->
+        <!--android:id="@+id/nome_autocomplete"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:completionThreshold="3"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="" />-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:textFontWeight="bolder"
-        android:layout_marginLeft="10sp"
-        android:text="@string/titlechickenparts"
-        />
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="180dp"-->
+        <!--android:textFontWeight="bolder"-->
+        <!--android:layout_marginLeft="10sp"-->
+        <!--android:text="@string/titlechickenparts"-->
+        <!--/>-->
 
-    <Spinner
-        android:layout_marginTop="200dp"
-        android:id="@+id/spinner"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        />
+    <!--<Spinner-->
+        <!--android:layout_marginTop="200dp"-->
+        <!--android:id="@+id/spinner"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--/>-->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textFontWeight="bolder"
-        android:layout_marginTop="280dp"
-        android:layout_marginLeft="10sp"
-        android:text="@string/titlethingstodo"
-        />
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textFontWeight="bolder"-->
+        <!--android:layout_marginTop="280dp"-->
+        <!--android:layout_marginLeft="10sp"-->
+        <!--android:text="@string/titlethingstodo"-->
+        <!--/>-->
 
-    <AutoCompleteTextView
-        android:id="@+id/fazer_autocomplete"
-        android:layout_width="match_parent"
-        android:completionThreshold="3"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="300dp"
-        android:layout_height="wrap_content"
-        android:text="" />
+    <!--<AutoCompleteTextView-->
+        <!--android:id="@+id/fazer_autocomplete"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:completionThreshold="3"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginTop="300dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="" />-->
 
     <!--</ScrollView>-->
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent" >
+
+    <include
+        layout="@layout/friends_content"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
+    </ScrollView>
 
         <ImageButton
             android:id="@+id/bt_adicionar"
