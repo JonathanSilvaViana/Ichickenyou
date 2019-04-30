@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:id="@+id/activity_male_friends"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
     android:layout_height="match_parent"
     tools:context=".MaleFriends">
 
@@ -97,6 +98,8 @@
         />
 
     </ScrollView>
+
+
 
         <ImageButton
             android:id="@+id/bt_adicionar"

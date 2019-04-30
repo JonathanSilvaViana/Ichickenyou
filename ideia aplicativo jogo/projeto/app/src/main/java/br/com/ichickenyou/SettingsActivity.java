@@ -287,8 +287,13 @@ public class SettingsActivity extends AppCompatActivity {
 
         //cria o tipo de intent
         bug_email_report = new Intent(Intent.ACTION_SEND);
-        //inclui o e-mail destinado ao aviso do bug
+
+        //as duas linhas seguintes de código incluem o e-mail destinado ao aviso do bug
+
+        //para versões mais antigas
         bug_email_report.putExtra(Intent.EXTRA_EMAIL, meuemail);
+        //para versões mais recentes do sistema operacional
+        bug_email_report.putExtra(android.content.Intent.EXTRA_EMAIL,new String[] { meuemail });
         //inclui o título da mensagem que será contida no e-mail
         bug_email_report.putExtra(Intent.EXTRA_SUBJECT, assunto);
         //inclui a instrução inicial de como compor a mensagem
