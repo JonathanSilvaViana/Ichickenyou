@@ -459,6 +459,7 @@
     </string-array>
 
     <string-array name="chickenparts">
+        <item> </item>
         <item>Crista</item>
         <item>Olhos</item>
         <item>Bico</item>
@@ -535,7 +536,7 @@
     </string-array>
 
     <string-array name="chickenparts_Korean_use_only">
-
+        <item> </item>
         <item>볏</item>
         <item>눈</item>
         <item>부리</item>

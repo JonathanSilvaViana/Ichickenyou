@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -27,12 +28,43 @@ public class MaleFriends extends AppCompatActivity {
     LinearLayout dynamicview;
     ScrollView scrollView_content_friends;
     FloatingActionButton bt_scroll2up;
+    AutoCompleteTextView nome_autocomplete, fazer_autocomplete;
+    ArrayAdapter<String> nomes_masculinos, partes_galinha, gosta_de_fazer_ou_faz;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_male_friends);
+
+        //encontra o campo de texto para nomes
+        nome_autocomplete = (AutoCompleteTextView)findViewById(R.id.nome_autocomplete);
+
+        //encontra o campo de texto para ações
+        fazer_autocomplete = (AutoCompleteTextView)findViewById(R.id.fazer_autocomplete);
+
+        //cria o array adapter de nomes masculinos
+        nomes_masculinos = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.malenames));
+
+        //cria o array adapter de partes da galinha
+        partes_galinha = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.chickenparts));
+
+        //cria o array adapter de ações que o usuário gosta de fazer ou faz
+        gosta_de_fazer_ou_faz = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.thingstodo));
+
+        //define o array adapter no campo de texto para nomes
+        nome_autocomplete.setAdapter(nomes_masculinos);
+        //delimita o tamanho do campo de texto para nomes
+        nome_autocomplete.setThreshold(1);
+        //define a largura do dropdown do autocomplete
+        nome_autocomplete.setDropDownWidth(700);
+
+        //define o array adapter no campo de texto para o nome das ações
+        fazer_autocomplete.setAdapter(gosta_de_fazer_ou_faz);
+        //delimita o tamanho do campo de texto para ações
+        nome_autocomplete.setThreshold(1);
+        //define a largura do dropdown do autocomplete
+        nome_autocomplete.setDropDownWidth(700);
 
         //instancia que localiza o scrollview da activity
         scrollView_content_friends = (ScrollView)findViewById(R.id.scrollView_content_friends);
@@ -99,6 +131,7 @@ public class MaleFriends extends AppCompatActivity {
                     AutoCompleteTextView nome_autocomplete_field = new AutoCompleteTextView(MaleFriends.this);
                     nome_autocomplete_field.setId(nome_autocomplete + 1);
                     final int index = nome_autocomplete;
+                    nome_autocomplete_field.setAdapter(nomes_masculinos);
                     dynamicview.addView(nome_autocomplete_field);
                     Log.i("ATxtView escreve o nome", "Index: " + index);
                 }
@@ -119,8 +152,11 @@ public class MaleFriends extends AppCompatActivity {
 
                 for (int spinner = 0; spinner < 1; spinner++)
                 {
+
                     Spinner galinha_spinner = new Spinner(MaleFriends.this);
+                    //partes_galinha = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.malenames));
                     galinha_spinner.setId(spinner + 1);
+                    galinha_spinner.setAdapter(partes_galinha);
                     final int index = spinner;
                     dynamicview.addView(galinha_spinner);
                     Log.i("cria spinner da galinha", "Index: " + index);
@@ -145,6 +181,7 @@ public class MaleFriends extends AppCompatActivity {
                     AutoCompleteTextView nome_acao_field = new AutoCompleteTextView(MaleFriends.this);
                     nome_acao_field.setId(nome_acao + 1);
                     final int index = nome_acao;
+                    nome_acao_field.setAdapter(gosta_de_fazer_ou_faz);
                     dynamicview.addView(nome_acao_field);
                     Log.i("ATxtView escreve a ação", "Index: " + index);
                 }

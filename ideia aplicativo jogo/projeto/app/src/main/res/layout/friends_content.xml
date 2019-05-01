@@ -19,7 +19,8 @@
         android:layout_width="match_parent"
         android:completionThreshold="3"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text=""
+        />
 
     <TextView
         android:layout_width="match_parent"
@@ -30,9 +31,10 @@
         />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/menu_partes_galinha"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:entries="@array/chickenparts"
         />
 
     <TextView
