@@ -163,11 +163,17 @@ public class MaleFriends extends AppCompatActivity {
                 //cria o botão excluir form
                 for (int btForm = 0; btForm < 1; btForm++)
                 {
-                    Button bt_delete_form = new Button(MaleFriends.this);
+                    final Button bt_delete_form = new Button(MaleFriends.this);
                     bt_delete_form.setId(btForm + 1);
                     bt_delete_form.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                     bt_delete_form.setTextColor(Color.WHITE);
                     bt_delete_form.setText(R.string.bt_erase_text);
+                    bt_delete_form.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            bt_delete_form.setVisibility(View.GONE);
+                        }
+                    });
                     dynamicview.addView(bt_delete_form);
                 }
 
