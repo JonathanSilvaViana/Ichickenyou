@@ -2,14 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#fff"
     android:id="@+id/conteudo_amigos"
     android:orientation="vertical">
-
-    <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:fillViewport="true"-->
-        <!--android:layout_height="match_parent" >-->
 
     <TextView
         android:layout_width="match_parent"
@@ -28,6 +24,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
         android:textFontWeight="bolder"
         android:text="@string/titlechickenparts"
         />
@@ -53,12 +50,33 @@
         android:layout_height="wrap_content"
         android:text="" />
 
+    <ImageButton
+        android:id="@+id/bt_adicionar"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/button_back"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/mais_um" />
+
+    <ImageButton
+        android:id="@+id/bt_next_step"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/button_back"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_next" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/colorPrimaryDark"/>
-
-    <!--</ScrollView>-->
 
 
 </LinearLayout>

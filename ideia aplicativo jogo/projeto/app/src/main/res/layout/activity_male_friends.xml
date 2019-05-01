@@ -18,98 +18,31 @@
         android:textAlignment="center"
         android:text="@string/diga_amigos" />
 
-    <!--<ScrollView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_centerInParent="true"-->
-    <!--android:scrollbars="none"-->
-    <!--android:layout_marginBottom="3dp"-->
-    <!--&gt;-->
-
-    <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="80dp"-->
-        <!--android:textFontWeight="bolder"-->
-        <!--android:layout_marginLeft="10sp"-->
-        <!--android:text="@string/titlemenunames"-->
-        <!--/>-->
-
-    <!--<AutoCompleteTextView-->
-        <!--android:id="@+id/nome_autocomplete"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:completionThreshold="3"-->
-        <!--android:layout_marginRight="15dp"-->
-        <!--android:layout_marginLeft="15dp"-->
-        <!--android:layout_marginTop="100dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="" />-->
-
-    <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="180dp"-->
-        <!--android:textFontWeight="bolder"-->
-        <!--android:layout_marginLeft="10sp"-->
-        <!--android:text="@string/titlechickenparts"-->
-        <!--/>-->
-
-    <!--<Spinner-->
-        <!--android:layout_marginTop="200dp"-->
-        <!--android:id="@+id/spinner"-->
-        <!--android:layout_marginRight="15dp"-->
-        <!--android:layout_marginLeft="15dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_width="match_parent"-->
-        <!--/>-->
-
-    <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:textFontWeight="bolder"-->
-        <!--android:layout_marginTop="280dp"-->
-        <!--android:layout_marginLeft="10sp"-->
-        <!--android:text="@string/titlethingstodo"-->
-        <!--/>-->
-
-    <!--<AutoCompleteTextView-->
-        <!--android:id="@+id/fazer_autocomplete"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:completionThreshold="3"-->
-        <!--android:layout_marginRight="15dp"-->
-        <!--android:layout_marginLeft="15dp"-->
-        <!--android:layout_marginTop="300dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="" />-->
-
-    <!--</ScrollView>-->
 
     <ScrollView
+    android:id="@+id/scrollView_content_friends"
     android:layout_width="match_parent"
     android:fillViewport="true"
     android:layout_height="match_parent" >
 
     <include
         layout="@layout/friends_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="115dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         />
 
     </ScrollView>
 
-        <ImageButton
-            android:id="@+id/bt_adicionar"
-            android:layout_marginTop="400dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="15dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/button_back"
-            android:tint="@android:color/white"
-            app:srcCompat="@drawable/mais_um" />
-
+    <android.support.design.widget.FloatingActionButton
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="250dp"
+        android:id="@+id/bt_scroll2up"
+        android:layout_width="wrap_content"
+        android:tint="#000"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        fab:srcCompat="@drawable/ic_up" />
 
 
 </RelativeLayout>

@@ -1,15 +1,21 @@
 package br.com.ichickenyou;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.Typeface;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,8 +23,10 @@ import android.widget.Toast;
 
 public class MaleFriends extends AppCompatActivity {
 
-    ImageButton bt_adicionar;
+    ImageButton bt_adicionar, bt_retorna;
     LinearLayout dynamicview;
+    ScrollView scrollView_content_friends;
+    FloatingActionButton bt_scroll2up;
 
 
     @Override
@@ -26,6 +34,32 @@ public class MaleFriends extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_male_friends);
 
+        //instancia que localiza o scrollview da activity
+        scrollView_content_friends = (ScrollView)findViewById(R.id.scrollView_content_friends);
+
+
+        bt_retorna = (ImageButton)findViewById(R.id.bt_next_step);
+
+        bt_retorna.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MaleFriends.this, "clicado", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //instancia que localiza o floating button para subir
+        bt_scroll2up = (FloatingActionButton)findViewById(R.id.bt_scroll2up);
+        //esconde o botão de subir por padrão
+        bt_scroll2up.hide();
+
+        //define o evento de clique no botão subir
+        bt_scroll2up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //sobe em direção ao ponto mais alto da tela
+                scrollView_content_friends.fullScroll(View.FOCUS_UP);
+            }
+        });
 
         bt_adicionar = (ImageButton)findViewById(R.id.bt_adicionar);
 
@@ -39,16 +73,10 @@ public class MaleFriends extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-//                for (int i=0; i<1; i++)
-//                {
-//                    Button btn = new Button(MaleFriends.this);
-//                    btn.setId(i+1);
-//                    btn.setText("Button"+(i+1));
-//                    final int index = i;
-//                    dynamicview.addView(btn);
-//                    Log.i("TAG", "The index is" + index);
-//                }
+                //exibe o botão de subir
+                bt_scroll2up.show();
+                //metodo que desce o scrollview ao final
+                scrollView_content_friends.fullScroll(View.FOCUS_DOWN);
 
                 //cria a textview que anuncia o pedido do nome do amigo(a)
 
@@ -119,15 +147,52 @@ public class MaleFriends extends AppCompatActivity {
                     Log.i("ATxtView escreve a ação", "Index: " + index);
                 }
 
-                //cria o separador
+                //cria o separador claro
                 for (int separador = 0; separador < 1; separador++)
                 {
-                    View linha_separador = new View(MaleFriends.this);
-                    linha_separador.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-//                    linha_separador.getLayoutParams().width = 1;
-//                    linha_separador.getLayoutParams().height = 2;
-                    linha_separador.setLayoutParams(new LinearLayout.LayoutParams(200, 200));
+                    TextView linha_separador = new TextView(MaleFriends.this);
+                    linha_separador.setId(separador + 1);
+                    linha_separador.setBackgroundColor(Color.WHITE);
+                    linha_separador.setTextSize(1);
+                    linha_separador.setText(" ");
+                    dynamicview.addView(linha_separador);
                 }
+
+                //cria o botão excluir form
+                for (int btForm = 0; btForm < 1; btForm++)
+                {
+                    Button bt_delete_form = new Button(MaleFriends.this);
+                    bt_delete_form.setId(btForm + 1);
+                    bt_delete_form.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    bt_delete_form.setTextColor(Color.WHITE);
+                    bt_delete_form.setText(R.string.bt_erase_text);
+                    dynamicview.addView(bt_delete_form);
+                }
+
+                //cria o segundo separador claro
+                for (int separador = 0; separador < 1; separador++)
+                {
+                    TextView linha_separador = new TextView(MaleFriends.this);
+                    linha_separador.setId(separador + 1);
+                    linha_separador.setBackgroundColor(Color.WHITE);
+                    linha_separador.setTextSize(1);
+                    linha_separador.setText(" ");
+                    dynamicview.addView(linha_separador);
+                }
+
+                //cria o separador escuro
+                for (int separador = 0; separador < 1; separador++)
+                {
+                    TextView linha_separador = new TextView(MaleFriends.this);
+                    linha_separador.setId(separador + 1);
+                    linha_separador.setBackgroundColor(Color.BLACK);
+                    //linha_separador.setLayoutParams(new LinearLayout.LayoutParams(200, 200));
+                    linha_separador.setTextSize(1);
+                    linha_separador.setText(" ");
+                    dynamicview.addView(linha_separador);
+                }
+
+
 
 
             }
