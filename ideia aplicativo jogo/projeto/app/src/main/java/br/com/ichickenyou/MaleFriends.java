@@ -14,9 +14,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.clans.fab.FloatingActionButton;
-import com.github.clans.fab.FloatingActionMenu;
-
 
 public class MaleFriends extends AppCompatActivity {
 
@@ -29,8 +26,6 @@ public class MaleFriends extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_male_friends);
 
-//        FloatingActionMenu materialDesignFAM;
-//        FloatingActionButton floatingActionButton1, floatingActionButton2, floatingActionButton3;
 
         bt_adicionar = (ImageButton)findViewById(R.id.bt_adicionar);
 
@@ -143,25 +138,7 @@ public class MaleFriends extends AppCompatActivity {
 
     }
 
-//    @Override
-//    public void onClick(View view){
-//        switch(view.getId()){
-//            case 1:
-//                //first button click
-//                break;
-//            //Second button click
-//            case 2:
-//                break;
-//            case 3:
-//                //third button click
-//                break;
-//            case 4:
-//                //fourth button click
-//                break;
-//            default:
-//                break;
-//        }
-//    }
+
 
     public void finish()
     {

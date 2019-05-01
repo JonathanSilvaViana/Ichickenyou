@@ -22,6 +22,6 @@ https://pt.wikipedia.org/wiki/Twitter --> logo do twitter
 https://androidexample.com/Dynamically_Create_View_Elements__-_Android_Example/index.php?view=article_discription&aid=115 --> criando elementos android
 https://stackoverflow.com/questions/10673628/implementing-onclicklistener-for-dynamically-created-buttons-in-android --> criando botões dinamicamente android de forma manual
 https://android-arsenal.com/details/1/5697 -> floating menu 1
+https://www.viralandroid.com/2016/02/android-floating-action-menu-example.html -> floating menu 1 (depreciado, usar em ultimo caso)
 https://android-arsenal.com/details/1/7612 -> recycler view com multiplos layouts
-https://android-arsenal.com/details/1/5361 -> cicle menu com floating buttons
-https://android-arsenal.com/details/1/5581 -> floating menu expansível 
+https://medium.com/androiddevelopers/appcompat-v23-2-age-of-the-vectors-91cbafa87c88 -> vetores
