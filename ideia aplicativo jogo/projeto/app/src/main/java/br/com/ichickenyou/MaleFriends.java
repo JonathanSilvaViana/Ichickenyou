@@ -58,6 +58,8 @@ public class MaleFriends extends AppCompatActivity {
             public void onClick(View v) {
                 //sobe em direção ao ponto mais alto da tela
                 scrollView_content_friends.fullScroll(View.FOCUS_UP);
+                //oculta o botão que sobe ao topo do layout da activity atual
+                bt_scroll2up.hide();
             }
         });
 
