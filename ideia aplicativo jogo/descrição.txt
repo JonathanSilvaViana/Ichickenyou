@@ -25,3 +25,4 @@ https://android-arsenal.com/details/1/5697 -> floating menu 1
 https://www.viralandroid.com/2016/02/android-floating-action-menu-example.html -> floating menu 1 (depreciado, usar em ultimo caso)
 https://android-arsenal.com/details/1/7612 -> recycler view com multiplos layouts
 https://medium.com/androiddevelopers/appcompat-v23-2-age-of-the-vectors-91cbafa87c88 -> vetores
+https://developer.android.com/training/appbar/actions -> criar um menu no toolbar
