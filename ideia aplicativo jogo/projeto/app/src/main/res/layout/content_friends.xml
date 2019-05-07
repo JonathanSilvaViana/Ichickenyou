@@ -31,8 +31,10 @@
         />
 
     <Spinner
+        style="@style/Widget.AppCompat.DropDownItem.Spinner"
         android:id="@+id/menu_partes_galinha"
-        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_height="70dp"
         android:layout_width="match_parent"
         android:entries="@array/chickenparts"
         />

@@ -26,7 +26,7 @@
     android:layout_height="match_parent" >
 
     <include
-        layout="@layout/friends_content"
+        layout="@layout/content_friends"
         android:layout_marginTop="115dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

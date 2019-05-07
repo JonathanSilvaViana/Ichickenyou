@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <dist:module dist:instant="true" />
 
     <application
@@ -17,13 +18,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnyGenderFriends"
+        <activity android:name=".ResultActivity"></activity>
+        <activity
+            android:name=".AnyGenderFriends"
             android:parentActivityName=".GenderActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".FemaleFriends"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FemaleFriends"
             android:parentActivityName=".GenderActivity"
-            android:screenOrientation="portrait"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MaleFriends"
             android:parentActivityName=".GenderActivity"

@@ -27,3 +27,4 @@ https://android-arsenal.com/details/1/7612 -> recycler view com multiplos layout
 https://medium.com/androiddevelopers/appcompat-v23-2-age-of-the-vectors-91cbafa87c88 -> vetores
 https://developer.android.com/training/appbar/actions -> criar um menu no toolbar
 https://stackoverflow.com/questions/3805599/add-delete-view-from-layout -> remove elementos da view
+https://proandroiddev.com/replace-progressdialog-with-a-progress-button-in-your-app-14ed1d50b44 --> progress buttom
