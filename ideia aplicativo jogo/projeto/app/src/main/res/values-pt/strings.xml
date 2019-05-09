@@ -459,7 +459,7 @@
     </string-array>
 
     <string-array name="chickenparts">
-        <item> </item>
+        <item> - </item>
         <item>Crista</item>
         <item>Olhos</item>
         <item>Bico</item>

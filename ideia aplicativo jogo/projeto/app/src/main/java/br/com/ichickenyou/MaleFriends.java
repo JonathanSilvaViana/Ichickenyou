@@ -1,15 +1,18 @@
 package br.com.ichickenyou;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -30,6 +33,8 @@ public class MaleFriends extends AppCompatActivity {
     FloatingActionButton bt_scroll2up;
     AutoCompleteTextView nome_autocomplete, fazer_autocomplete;
     ArrayAdapter<String> nomes_masculinos, partes_galinha, gosta_de_fazer_ou_faz;
+    String nome_amigo, nome_parte_da_galinha, nome_acao;
+    Spinner menu_partes_galinha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +43,18 @@ public class MaleFriends extends AppCompatActivity {
 
         //encontra o campo de texto para nomes
         nome_autocomplete = (AutoCompleteTextView)findViewById(R.id.nome_autocomplete);
+        //coleta o texto digitado no campo de nome
+        nome_amigo = nome_autocomplete.getText().toString();
+
+        //encontra o campo de selelção para partes da galinha
+        menu_partes_galinha = (Spinner)findViewById(R.id.menu_partes_galinha);
+        //coleta o texto do menu de seleção de parte da galinha
+        menu_partes_galinha.getSelectedItem().toString();
 
         //encontra o campo de texto para ações
         fazer_autocomplete = (AutoCompleteTextView)findViewById(R.id.fazer_autocomplete);
+        //coleta o texto digitado no campo de ações
+        nome_acao = fazer_autocomplete.getText().toString();
 
         //cria o array adapter de nomes masculinos
         nomes_masculinos = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, getResources().getStringArray(R.array.malenames));
@@ -71,10 +85,31 @@ public class MaleFriends extends AppCompatActivity {
         //cria a instancia localizando o botão que avança ao resultado
         bt_avanca_resultado = (ImageButton)findViewById(R.id.bt_next_step);
 
+        //evento que move à página de resultados
         bt_avanca_resultado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MaleFriends.this, "clicado", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MaleFriends.this, "Clicado", Toast.LENGTH_SHORT).show();
+
+                //teste para obter os dados
+
+                //pega o nome digitado no campo de nome
+                String pega_nome = nome_autocomplete.getText().toString();
+                //pega a ação digitado no campo de ação
+                String pega_acao = fazer_autocomplete.getText().toString();
+                //pega o nome da parte da galinha escolhida no campo de escolher a parte da galinha
+                String pega_parte_galinha = menu_partes_galinha.getSelectedItem().toString();
+                //gerador de espaço
+                String espaco = " ";
+                //variável que unifica as informações
+                String unificador = pega_parte_galinha + espaco + pega_nome + espaco + pega_acao;
+
+                Intent vai_ao_resultado = new Intent(MaleFriends.this, ResultActivity.class);
+                String resultado_unificado = "resultado";
+                vai_ao_resultado.putExtra(resultado_unificado, unificador);
+                startActivity(vai_ao_resultado);
+                finish();
+
             }
         });
 
@@ -91,6 +126,7 @@ public class MaleFriends extends AppCompatActivity {
                 scrollView_content_friends.fullScroll(View.FOCUS_UP);
                 //oculta o botão que sobe ao topo do layout da activity atual
                 bt_scroll2up.hide();
+
             }
         });
 
@@ -239,3 +275,4 @@ public class MaleFriends extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_in_right);
     }
 }
+
