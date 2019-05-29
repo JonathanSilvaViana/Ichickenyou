@@ -28,3 +28,4 @@ https://medium.com/androiddevelopers/appcompat-v23-2-age-of-the-vectors-91cbafa8
 https://developer.android.com/training/appbar/actions -> criar um menu no toolbar
 https://stackoverflow.com/questions/3805599/add-delete-view-from-layout -> remove elementos da view
 https://proandroiddev.com/replace-progressdialog-with-a-progress-button-in-your-app-14ed1d50b44 --> progress buttom
+https://devtalk.kakao.com/t/kakao-web-url-to-share-a-link-in-either-kakao-talk-kakao-story-also-okay/25801 --> lib share kakao
