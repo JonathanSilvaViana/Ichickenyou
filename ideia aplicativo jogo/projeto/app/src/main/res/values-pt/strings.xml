@@ -1,10 +1,18 @@
 <resources>
     <string name="app_name">I Chicken You</string>
     <string name="teste">funfou</string>
-    <string name="meuemail">jonathansilva@daum.net</string>
     <string name="assuntoemail">I Chicken You - Bug encontrado</string>
     <string name="mensagememail">Por gentileza, descreva detalhadamente todos detalhes do bug encontrado.</string>
     <string name="enunciadointentbug">Escolha um cliente de e-mail para prosseguir</string>
+
+    <!--nomes das redes sociais-->
+
+    <string-array name="redes_sociais">
+        <item color="#4682e3">Twitter</item>
+        <item color="#f0f714">Kakao</item>
+        <item  color="#02cc05">Encerrar</item>
+    </string-array>
+
 
     <!--menus de seleção-->
 
@@ -20,8 +28,6 @@
     <string name="ir_regras">Ir</string>
     <string name="depois">Depois</string>
     <string name="motivar">Vamos lá:</string>
-
-   <string name="a">aa</string>
 
     <string name="sobre_texto">Aplicativo com finalidade de apresentação de trabalho de conclusão de curso na Universidade Estácio de Sá Polo Paraíso de São Paulo, para a obtenção do título de bacharel em Sistemas de Informação. A ideia deste aplicativo foi tornar uma brincadeira brasileira um jogo contemporâneo, eternizando uma brincadeira cultural.</string>
     <!--botões-->
@@ -56,8 +62,6 @@
     <string name="fechar">Encerrar</string>
     <string name="naofechar">Não encerrar</string>
     <string name="sobre_som">Som:</string>
-    <string name="no_sound">off</string>
-    <string name="off_sound">on</string>
 
     <string-array name="malenames">
         <item>Adriano</item>
@@ -582,5 +586,6 @@
         <item>7 - Lembre-se que tudo que for resultado do uso deste aplicativo é uma brincadeira sutil, sem a proposição de qualquer ideia contrária ou ofensiva.</item>
         <item>8 - O usuário final é o responsável por todos resultados que tenha utilizado neste aplicativo.</item>
     </string-array>
+    <string name="choose_social_destination">Em qual rede social?</string>
 
 </resources>

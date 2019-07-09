@@ -1,12 +1,19 @@
 <resources>
     <string name="app_name">아이 친킨 우</string>
     <string name="teste">했어</string>
-    <string name="meuemail">jonathansilva@daum.net</string>
     <string name="assuntoemail">아이 친킨 우 - 결점 신고</string>
     <string name="mensagememail">자세한 결점의 내용을 설명해주세요.</string>
     <string name="enunciadointentbug">계속하려면 이메일 클라이언트를 선택하고 주세요</string>
 
     <!--menus de seleção-->
+
+    <!--nomes das redes sociais-->
+
+    <string-array name="redes_sociais">
+        <item color="#4682e3">트위터</item>
+        <item color="#f0f714">카카오 스토리</item>
+        <item color="#02cc05">닫다</item>
+    </string-array>
 
     <string name="titlemenunames">이름을 선택하십시오:</string>
     <string name="titlechickenparts">닭고기 조각을 선택하십시오:</string>
@@ -20,8 +27,6 @@
     <string name="ir_regras">가</string>
     <string name="depois">더 늦은</string>
     <string name="motivar">대답하지:</string>
-
-    <string name="a">aa</string>
 
     <!--textos do alertdialog-->
     <string name="enunciado">앱을 닫기?</string>
@@ -43,8 +48,6 @@
     <string name="bt_advance_text">다음</string>
     <string name="bt_back_text">돌아가다</string>
     <string name="sobre_som">소리:</string>
-    <string name="no_sound">off</string>
-    <string name="off_sound">on</string>
     <string name="saved">오케이</string>
 
     <!--nomes menu slide-->
@@ -584,5 +587,6 @@
         <item>7 - 어떠한 의견의 대립이나 (상대방을) 불쾌하게 하려는 의도라고 할 것도 없이 이 앱을 사용해서 결과적으로 얻을 수 있는 건 가치없는 이야기들 뿐 이라는 걸 알아둬합니다.</item>
         <item>8 - 최종 사용자는 이 응용 프로그램에서 사용된 모든 결과에 대하여 고유한 법적 책임이 있습니다.</item>
     </string-array>
+    <string name="choose_social_destination">어디에 샤레하고 싶어요?</string>
 
 </resources>

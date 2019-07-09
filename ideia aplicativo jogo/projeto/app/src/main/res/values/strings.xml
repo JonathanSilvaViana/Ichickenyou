@@ -1,12 +1,20 @@
 <resources>
     <string name="app_name">I Chicken You</string>
     <string name="teste">it works!</string>
-    <string name="meuemail">jonathansilva@daum.net</string>
+    <string name="meuemail" translatable="false">jonathansilva@daum.net</string>
     <string name="assuntoemail">I Chicken You - Bug report</string>
     <string name="mensagememail">Please, describe all details of the bug which you found.</string>
     <string name="enunciadointentbug">Choose a email client to proceed</string>
 
     <!--menus de seleção-->
+
+    <!--nomes das redes sociais-->
+
+    <string-array name="redes_sociais">
+        <item color="#4682e3">Twitter</item>
+        <item color="#f0f714">Kakao</item>
+        <item color="#02cc05">Close</item>
+    </string-array>
 
     <string name="titlemenunames">Choose a friend\'s name:</string>
     <string name="titlechickenparts">Choose a chicken body part:</string>
@@ -17,7 +25,7 @@
     <string name="diga_amigas">What about your friend(s)?</string>
     <string name="diga_amigos_e_amigas">What about your friend(s)?</string>
 
-    <string name="a">aa</string>
+    <string name="a" translatable="false">aa</string>
 
     <string name="sobre_texto">Application for the purpose of presenting a final paper at the Estácio de Sá Polo Paraíso Universidade em São Paulo, to obtain a bachelor\'s degree in Information Systems. The idea of this application was to make a Brazilian game a contemporary game, perpetuating a cultural game.</string>
 
@@ -27,8 +35,8 @@
     <string name="fechar">Close</string>
     <string name="naofechar">Don\'t close</string>
     <string name="sobre_som">Sound:</string>
-    <string name="no_sound">off</string>
-    <string name="off_sound">on</string>
+    <string name="no_sound" translatable="false">off</string>
+    <string name="off_sound" translatable="false">on</string>
 
     <!--botões-->
 
@@ -568,7 +576,7 @@
     <string name="recuso">I refuse</string>
     <string name="grato">Thanks!</string>
     <string name="aindasimgrato">thanks, please uninstall this application.</string>
-    <string name="aceite_primeiro">You need to agree to the game rules first.</string>
+    <string name="aceite_primeiro">You must agree to the game rules first.</string>
     <string name="ir_regras">Go</string>
     <string name="depois">Later</string>
     <string name="motivar">let\'s go:</string>
@@ -583,8 +591,8 @@
         <item>7 - Remember yourself that any result of using this application is only a subtle kidding, without the proposition of any contrary or offensive idea.</item>
         <item>8 - The end user is the unique and legal responsible for all results due have used in this application.</item>
     </string-array>
-    <string name="title_activity_settings">SettingsActivity</string>
-    <string name="large_text">
+    <string name="title_activity_settings" translatable="false">SettingsActivity</string>
+    <string name="large_text" translatable="false">
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."
@@ -673,6 +681,9 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="choose_social_destination">Which social network?</string>
+    <string name="Twitter" translatable="false">Twitter</string>
+    <string name="Kakao" translatable="false">Kakao</string>
 
 
 </resources>

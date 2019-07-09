@@ -1,28 +1,26 @@
 package br.com.ichickenyou;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
+import org.apache.commons.lang3.StringUtils;
+
+
 
 
 public class MaleFriends extends AppCompatActivity {
@@ -33,7 +31,7 @@ public class MaleFriends extends AppCompatActivity {
     FloatingActionButton bt_scroll2up;
     AutoCompleteTextView nome_autocomplete, fazer_autocomplete;
     ArrayAdapter<String> nomes_masculinos, partes_galinha, gosta_de_fazer_ou_faz;
-    String nome_amigo, nome_parte_da_galinha, nome_acao;
+    String nome_amigo, nome_acao, pega_acao_formatada, pega_parte_galinha_formatada, de, espaco, pega_nome_formatado;
     Spinner menu_partes_galinha;
 
     @Override
@@ -95,14 +93,30 @@ public class MaleFriends extends AppCompatActivity {
 
                 //pega o nome digitado no campo de nome
                 String pega_nome = nome_autocomplete.getText().toString();
+                //define o nome como inicial maiúscula, usando o pacote StringUtils, do projeto apache
+                pega_nome_formatado = StringUtils.capitalize(pega_nome);
                 //pega a ação digitado no campo de ação
                 String pega_acao = fazer_autocomplete.getText().toString();
+                //define a ação como inicial maiúscula, usando o pacote StringUtils, do projeto apache
+                pega_acao_formatada = StringUtils.capitalize(pega_acao);
                 //pega o nome da parte da galinha escolhida no campo de escolher a parte da galinha
                 String pega_parte_galinha = menu_partes_galinha.getSelectedItem().toString();
+                //define a parte da galinha como todas letras minúsculas, usando o pacote StringUtils, do projeto apache
+                pega_parte_galinha_formatada = StringUtils.lowerCase(pega_parte_galinha);
+                //checa se o nome da parte final da galinha termina com "s", ou seja, se está no plural.
+                Boolean checa_se_termina_com_s = StringUtils.endsWith(pega_parte_galinha_formatada, "s");
+                if(checa_se_termina_com_s == true)
+                {
+                    Toast.makeText(MaleFriends.this, "plural", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(MaleFriends.this, "singular", Toast.LENGTH_SHORT).show();
+                }
                 //gerador de espaço
-                String espaco = " ";
+                espaco = " ";
+                de = "de";
                 //variável que unifica as informações
-                String unificador = pega_parte_galinha + espaco + pega_nome + espaco + pega_acao;
+                String unificador = pega_acao_formatada + espaco + pega_parte_galinha_formatada + espaco + de + espaco + pega_nome_formatado;
 
                 Intent vai_ao_resultado = new Intent(MaleFriends.this, ResultActivity.class);
                 String resultado_unificado = "resultado";
