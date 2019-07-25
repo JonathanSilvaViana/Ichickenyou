@@ -31,7 +31,7 @@ public class MaleFriends extends AppCompatActivity {
     FloatingActionButton bt_scroll2up;
     AutoCompleteTextView nome_autocomplete, fazer_autocomplete;
     ArrayAdapter<String> nomes_masculinos, partes_galinha, gosta_de_fazer_ou_faz;
-    String nome_amigo, nome_acao, pega_acao_formatada, pega_parte_galinha_formatada, de, espaco, pega_nome_formatado;
+    String nome_amigo, nome_acao, pega_acao_formatada, pega_parte_galinha_formatada, de, espaco, pega_nome_formatado, preposicao_plural;
     Spinner menu_partes_galinha;
 
     @Override
@@ -91,6 +91,8 @@ public class MaleFriends extends AppCompatActivity {
 
                 //teste para obter os dados
 
+                //gerador de espaço
+                espaco = " ";
                 //pega o nome digitado no campo de nome
                 String pega_nome = nome_autocomplete.getText().toString();
                 //define o nome como inicial maiúscula, usando o pacote StringUtils, do projeto apache
@@ -108,15 +110,36 @@ public class MaleFriends extends AppCompatActivity {
                 if(checa_se_termina_com_s == true)
                 {
                     Toast.makeText(MaleFriends.this, "plural", Toast.LENGTH_SHORT).show();
+                    //aplicar a string array com seus valores no contexto
+
+                    String[] preposicoes = {
+                            "de",
+                            "da",
+                            "do",
+                            "dos",
+                            "das",
+                            "na",
+                            "nas",
+                            "no",
+                            "nos",
+                            "sob",
+                            "em cima",
+                            "em cima de",
+                            "em cima da",
+                            "em cima das",
+                            "em cima do",
+                            "em cima dos"
+                    };
+                    preposicao_plural= "das" + espaco;
                 }
                 else {
                     Toast.makeText(MaleFriends.this, "singular", Toast.LENGTH_SHORT).show();
+                    preposicao_plural = "";
                 }
-                //gerador de espaço
-                espaco = " ";
+
                 de = "de";
                 //variável que unifica as informações
-                String unificador = pega_acao_formatada + espaco + pega_parte_galinha_formatada + espaco + de + espaco + pega_nome_formatado;
+                String unificador = pega_acao_formatada + espaco + preposicao_plural + pega_parte_galinha_formatada + espaco + de + espaco + pega_nome_formatado;
 
                 Intent vai_ao_resultado = new Intent(MaleFriends.this, ResultActivity.class);
                 String resultado_unificado = "resultado";
