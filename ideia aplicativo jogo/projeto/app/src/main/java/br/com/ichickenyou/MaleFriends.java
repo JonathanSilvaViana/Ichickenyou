@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 import org.apache.commons.lang3.StringUtils;
 
-
+import java.util.Calendar;
 
 
 public class MaleFriends extends AppCompatActivity {
@@ -31,8 +31,11 @@ public class MaleFriends extends AppCompatActivity {
     FloatingActionButton bt_scroll2up;
     AutoCompleteTextView nome_autocomplete, fazer_autocomplete;
     ArrayAdapter<String> nomes_masculinos, partes_galinha, gosta_de_fazer_ou_faz;
-    String nome_amigo, nome_acao, pega_acao_formatada, pega_parte_galinha_formatada, de, espaco, pega_nome_formatado, preposicao_plural;
+    String nome_amigo, nome_acao, pega_acao_formatada, pega_parte_galinha_formatada, pega_parte_galinha, de, espaco, pega_nome_formatado, preposicao_plural;
     Spinner menu_partes_galinha;
+    boolean checa_se_termina_com_s, checa_se_termina_com_cao,checa_se_termina_com_eca, checa_se_termina_com_gem, checa_se_termina_com_ras, checa_se_termina_com_ele, checa_se_termina_com_rra, checa_se_termina_com_ico, checa_se_termina_com_sta, checa_se_termina_com_hos, checa_se_termina_com_ado, checa_se_termina_com_ata, checa_se_termina_com_sa, checa_se_termina_com_ela, checa_se_termina_com_oxa, checa_se_termina_com_oxas, checa_se_termina_com_apo, checa_se_termina_com_ito;
+    Calendar calendario;
+    int dia_da_semana;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,42 +105,182 @@ public class MaleFriends extends AppCompatActivity {
                 //define a ação como inicial maiúscula, usando o pacote StringUtils, do projeto apache
                 pega_acao_formatada = StringUtils.capitalize(pega_acao);
                 //pega o nome da parte da galinha escolhida no campo de escolher a parte da galinha
-                String pega_parte_galinha = menu_partes_galinha.getSelectedItem().toString();
+                pega_parte_galinha = menu_partes_galinha.getSelectedItem().toString();
                 //define a parte da galinha como todas letras minúsculas, usando o pacote StringUtils, do projeto apache
                 pega_parte_galinha_formatada = StringUtils.lowerCase(pega_parte_galinha);
-                //checa se o nome da parte final da galinha termina com "s", ou seja, se está no plural.
-                Boolean checa_se_termina_com_s = StringUtils.endsWith(pega_parte_galinha_formatada, "s");
-                if(checa_se_termina_com_s == true)
-                {
-                    Toast.makeText(MaleFriends.this, "plural", Toast.LENGTH_SHORT).show();
-                    //aplicar a string array com seus valores no contexto
+                //checa se o nome da parte final da galinha termina com "s".
+                checa_se_termina_com_s = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "s");
+                //checa se o nome da parte final da galinha termina com "hos"
+                checa_se_termina_com_hos = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "hos");
+                //checa se o nome da parte final da galinha termina com "ado"
+                checa_se_termina_com_ado = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "ado");
+                //checa se o nome da parte final da galinha termina com "pes"
+                checa_se_termina_com_ata = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "ata");
+                //checa se o nome da parte final da galinha termina com "sa"
+                checa_se_termina_com_sa = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "sa");
+                //checa se o nome da parte final da galinha termina com "ela"
+                checa_se_termina_com_ela = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "ela");
+                //checa se o nome da parte final da galinha termina com "oxa"
+                checa_se_termina_com_oxa = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "oxa");
+                //checa se o nome da parte final da galinha termina com "xas"
+                checa_se_termina_com_oxas = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "xas");
+                //checa se o nome da parte final da galinha termina com "apo"
+                checa_se_termina_com_apo = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "apo");
+                //checa se o nome da parte final da galinha termina com "ito"
+                checa_se_termina_com_ito = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "ito");
+                //checa se o nome da parte final da galinha termina com "ico"
+                checa_se_termina_com_ico = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "ico");
+                //checa se o nome da parte final da galinha termina com "sta"
+                checa_se_termina_com_sta = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "sta");
+                //checa se o nome da parte final da galinha termina com "rra"
+                checa_se_termina_com_rra = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "rra");
+                //checa se o nome da parte final da galinha termina com "ras"
+                checa_se_termina_com_ras = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "ras");
+                //checa se o nome da parte final da galinha termina com "ele"
+                checa_se_termina_com_ele = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "ele");
+                //checa se o nome da parte final da galinha termina com "gem"
+                checa_se_termina_com_gem = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "gem");
+                //checa se o nome da parte final da galinha termina com "eça"
+                checa_se_termina_com_eca = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "eça");
+                //checa se o nome da parte final da galinha termina com "cao"
+                checa_se_termina_com_cao = StringUtils.endsWithIgnoreCase(pega_parte_galinha_formatada, "ção");
 
-                    String[] preposicoes = {
-                            "de",
-                            "da",
-                            "do",
-                            "dos",
-                            "das",
-                            "na",
-                            "nas",
-                            "no",
-                            "nos",
-                            "sob",
-                            "em cima",
-                            "em cima de",
-                            "em cima da",
-                            "em cima das",
-                            "em cima do",
-                            "em cima dos"
-                    };
-                    preposicao_plural= "das" + espaco;
+                //váriavel que adquire a instancia de calendário
+                calendario = Calendar.getInstance();
+                //váriavel que adquire o dia da semana a partir de calendário
+                dia_da_semana = calendario.get(Calendar.DAY_OF_WEEK);
+
+                //variável que define um índice de valores tipo string contendo preposições da língua portuguesa usados no aplicativo
+                String[] preposicoes_portugues = {
+                        "de",
+                        "da",
+                        "do",
+                        "dos",
+                        "das",
+                        "na",
+                        "os",
+                        "as",
+                        "nas",
+                        "no",
+                        "nos",
+                        "sob",
+                        "em cima",
+                        "em cima de",
+                        "em cima da",
+                        "em cima das",
+                        "em cima do",
+                        "em cima dos",
+                        "sob a"
+                };
+
+                //variável que define um índice de valores tipo string contendo preposições da língua inglesa usados no aplicativo
+                String[] preposicoes_ingles = {
+                        "of",
+                        "on",
+                        "at",
+                        "in",
+                        "in the",
+                        "'s",
+                        "the"
+                };
+
+                //variável que define um índice de valores tipo string contendo preposições da língua coreana usados no aplicativo
+                String[] preposicoes_coreano = {
+                        "씨",
+                        "는",
+                        "은",
+                        "의",
+                        "이",
+                        "가"
+                };
+
+                //criar um switch checando letras e terminações de partes da galinha
+
+                if(checa_se_termina_com_hos && checa_se_termina_com_s)
+                {
+                    //define qual preposição incluir coletando um valor do array de preposições na língua portuguesa
+                    preposicao_plural = preposicoes_portugues[10] + espaco;
+                    Log.d("termina com 'os'", "plural?");
                 }
-                else {
-                    Toast.makeText(MaleFriends.this, "singular", Toast.LENGTH_SHORT).show();
+
+                else if (checa_se_termina_com_s || checa_se_termina_com_oxas || checa_se_termina_com_ras)
+                {
+                    Log.d("Palavra termina com 's'", "plural feminino");
+                    preposicao_plural = preposicoes_portugues[8] + espaco;
+                }
+
+                else if (checa_se_termina_com_ado || checa_se_termina_com_cao || checa_se_termina_com_apo || checa_se_termina_com_ito || checa_se_termina_com_ico)
+                {
+                    Log.d("termina com 'ado'", "ado");
+                    preposicao_plural = preposicoes_portugues[9] + espaco;
+                }
+
+                else if (checa_se_termina_com_ata || checa_se_termina_com_ele || checa_se_termina_com_rra || checa_se_termina_com_sta || checa_se_termina_com_sa || checa_se_termina_com_ela || checa_se_termina_com_oxa)
+                {
+                    Log.d("termina com 'ata'", "ata");
+                    preposicao_plural = preposicoes_portugues[5] + espaco;
+                }
+
+                else if(checa_se_termina_com_gem)
+                {
+                    Log.d("termina com 'gem'", "gem");
+                    preposicao_plural = preposicoes_portugues[14] + espaco;
+                }
+
+                else if (checa_se_termina_com_eca)
+                {
+                    Log.d("termina com 'eca'", "eca");
+
+                    //função especial na "cabeça da galinha" medida a partir do dia da semana, afetando o resultado de maneira hilária
+
+                    switch (dia_da_semana)
+                    {
+
+                        case Calendar.SUNDAY:
+                            preposicao_plural = "pairando" + espaco + preposicoes_portugues[18] + espaco;
+                            break;
+
+                        case Calendar.MONDAY:
+                            preposicao_plural = "enquanto rodando" + espaco + preposicoes_portugues[18] + espaco;
+                            break;
+
+                        case Calendar.TUESDAY:
+                            preposicao_plural = "quebrando as leis da gravidade" + espaco + preposicoes_portugues[18] + espaco;
+                            break;
+
+                        case Calendar.WEDNESDAY:
+                            preposicao_plural = "novamente" + espaco + preposicoes_portugues[18] + espaco;
+                            break;
+
+                        case Calendar.THURSDAY:
+                            preposicao_plural = "e usando o app" + espaco + preposicoes_portugues[18] + espaco;
+                            break;
+
+                        case Calendar.FRIDAY:
+                            preposicao_plural = "e usando o app" + espaco + preposicoes_portugues[18] + espaco;
+                            break;
+
+                        case Calendar.SATURDAY:
+                            preposicao_plural = preposicoes_portugues[18] + espaco;
+                            break;
+
+                        default:
+                            preposicao_plural = preposicoes_portugues[18] + espaco;
+                            break;
+                    }
+
+                    //preposicao_plural = preposicoes_portugues[18] + espaco;
+                }
+
+                else
+                {
+                    Log.d("Singular", "palavra no singular");
                     preposicao_plural = "";
                 }
 
-                de = "de";
+
+
+                de = preposicoes_portugues[0];
                 //variável que unifica as informações
                 String unificador = pega_acao_formatada + espaco + preposicao_plural + pega_parte_galinha_formatada + espaco + de + espaco + pega_nome_formatado;
 
