@@ -10,6 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/Txt_view_escolher_nome_de_amigo"
         android:layout_marginLeft="10sp"
         android:text="@string/titlemenunames"
         android:textFontWeight="bolder" />
@@ -26,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10sp"
+        android:id="@+id/Txt_view_escolher_parte_da_galinha"
         android:textFontWeight="bolder"
         android:text="@string/titlechickenparts"
         />
@@ -42,6 +44,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/Txt_view_escolher_algo_que_gosta_de_fazer"
         android:textFontWeight="bolder"
         android:layout_marginLeft="10sp"
         android:text="@string/titlethingstodo"

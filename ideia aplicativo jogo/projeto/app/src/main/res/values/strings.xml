@@ -496,12 +496,12 @@
         <item>부리</item>
         <item>사낭</item>
         <item>날개</item>
-        <item>Plumagem</item>
+        <item>깃털들</item>
         <item>가슴살</item>
         <item>위</item>
         <item>심장</item>
         <item>간</item>
-        <item>Tripas</item>
+        <item>닭 내장</item>
         <item>머리</item>
         <item>피부</item>
         <item>발톱</item>
@@ -522,46 +522,46 @@
         <item>eat</item>
         <item>buy</item>
         <item>conquer</item>
-        <item>to kiss</item>
-        <item>to date</item>
+        <item>kiss</item>
+        <item>date</item>
         <item>go to mall</item>
         <item>to be sleepy</item>
         <item>to massage</item>
         <item>play</item>
         <item>play video game</item>
-        <item>to surf</item>
-        <item>to swimming</item>
-        <item>to play basketball</item>
-        <item>to play volleyball</item>
-        <item>to slap</item>
+        <item>surf</item>
+        <item>swim</item>
+        <item>play basketball</item>
+        <item>play volleyball</item>
+        <item>slap</item>
         <item>talk</item>
-        <item>flirting</item>
-        <item>to love</item>
+        <item>flirt</item>
+        <item>love</item>
         <item>drink</item>
         <item>leave</item>
-        <item>got sick</item>
-        <item>to read</item>
-        <item>to work</item>
-        <item>to study</item>
-        <item>to watch</item>
-        <item>to admire</item>
-        <item>to help</item>
-        <item>to feed</item>
+        <item>sick</item>
+        <item>read</item>
+        <item>work</item>
+        <item>study</item>
+        <item>watch</item>
+        <item>admire</item>
+        <item>help</item>
+        <item>feed</item>
         <item>dinner</item>
         <item>lunch</item>
-        <item>to take</item>
-        <item>to stable</item>
-        <item>to dream</item>
-        <item>to play baseball</item>
-        <item>to scream</item>
-        <item>to dive in</item>
-        <item>to meet</item>
+        <item>take</item>
+        <item>stable</item>
+        <item>dream</item>
+        <item>play baseball</item>
+        <item>scream</item>
+        <item>dive</item>
+        <item>meet</item>
         <item>skiing</item>
-        <item>to troll</item>
-        <item>to joke</item>
+        <item>troll</item>
+        <item>joke</item>
         <item>muss</item>
         <item>organize</item>
-        <item>to draw</item>
+        <item>draw</item>
     </string-array>
 
     <string name="title_activity_menu">I Chicken You</string>
