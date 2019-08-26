@@ -406,7 +406,7 @@ public class MaleFriends extends AppCompatActivity {
 
                     //unifica o resultado calculado em coreano
                     unificador =
-                            pega_nome +
+                                    pega_nome +
                                     preposicoes_coreano[0] +
                                     preposicoes_coreano[3] +
                                     espaco +
@@ -420,6 +420,16 @@ public class MaleFriends extends AppCompatActivity {
                 else if (se_idioma_ingles)
                 {
                     //completar idioma inglês
+
+                    unificador =
+                                    pega_acao_formatada +
+                                    espaco +
+                                    pega_nome_formatado +
+                                    preposicoes_ingles[5] +
+                                    espaco +
+                                    pega_parte_galinha_formatada
+
+                            ;
                 }
                 else
                 {
