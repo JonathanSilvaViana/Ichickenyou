@@ -419,7 +419,44 @@ public class MaleFriends extends AppCompatActivity {
                 }
                 else if (se_idioma_ingles)
                 {
-                    //completar idioma inglês
+                    //sequência sortida caso seja o idioma inglês no device do usuário
+
+                    switch (dia_da_semana)
+                    {
+
+                        case Calendar.SUNDAY:
+                            Log.d("1° feira :P", "sunday ok");
+                            break;
+
+                        case Calendar.MONDAY:
+                            Log.d("2° feira", "monday ok");
+                            break;
+
+                        case Calendar.TUESDAY:
+                            Log.d("3° feira", "tuesday ok");
+                            break;
+
+                        case Calendar.WEDNESDAY:
+                            Log.d("4° feira", "wednesday ok");
+                            break;
+
+                        case Calendar.THURSDAY:
+                            Log.d("5° feira", "thursday ok");
+                            break;
+
+                        case Calendar.FRIDAY:
+                            Log.d("6° feira", "friday ok");
+                            pega_nome = "friday party at" + espaco + pega_nome + preposicoes_ingles[5] + "house, so" + espaco;
+                            break;
+
+                        case Calendar.SATURDAY:
+                            Log.d("epaaa! é sábado!!!", "saturday normal");
+                            break;
+
+                        default:
+                            Log.d("erro feira", "erro calendário");
+                            break;
+                    }
 
                     unificador =
                                     pega_acao_formatada +

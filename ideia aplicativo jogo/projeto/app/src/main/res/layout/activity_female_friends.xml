@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
     android:layout_height="match_parent"
-    tools:context=".FemaleFriends">
+    tools:context=".MaleFriends">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/titlemalegenders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textFontWeight="bold"
+        android:fontFamily="@font/looneytunes"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:text="@string/diga_amigas" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView_content_friends"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent" >
+
+        <include
+            layout="@layout/content_friends"
+            android:layout_marginTop="115dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="250dp"
+        android:id="@+id/bt_scroll2up"
+        android:layout_width="wrap_content"
+        android:tint="#000"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        fab:srcCompat="@drawable/ic_up" />
+
+
+</RelativeLayout>
