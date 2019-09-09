@@ -166,10 +166,12 @@ public class HomeFragment extends Fragment {
                                                                  public void run() {
                                                                      rulesFragment = new RulesFragment();
                                                                      getActivity().getSupportFragmentManager().beginTransaction()
-                                                                             .replace(R.id.include_home_content, rulesFragment, "passa à regras")
+                                                                             .replace(R.id.fragment_home_id, rulesFragment, "passa às regras")
                                                                              .addToBackStack(null)
                                                                              .commit();
+                                                                     getActivity().getFragmentManager().popBackStack();
                                                                  }
+
                                                              },
 
                                             tempo_encerramento);

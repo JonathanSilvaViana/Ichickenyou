@@ -5,6 +5,11 @@
     <string name="mensagememail">자세한 결점의 내용을 설명해주세요.</string>
     <string name="enunciadointentbug">계속하려면 이메일 클라이언트를 선택하고 주세요</string>
 
+    <!--idiomas-->
+    <string name="idioma_portugues">pt</string>
+    <string name="idioma_coreano">ko</string>
+    <string name="idioma_ingles">en</string>
+
     <!--menus de seleção-->
 
     <!--nomes das redes sociais-->

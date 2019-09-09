@@ -170,6 +170,17 @@ public class SettingsActivity extends AppCompatActivity {
                 {
                     //se nenhuma opção foi selecionada, então faz um log durante o processo de debug mencionando o fato.
                         Log.d("Nenhum selecionado", "Nenhuma opção selecionada");
+
+                    //inclui valores significativos para ativaçãpo de audio
+                    editor.putBoolean("ATIVADO", som_on.isChecked());
+                    editor.putString("Audio", "com audio");
+                    //remove as preferências conflitantes caso existam
+                    editor.remove("DESATIVADO");
+                    //aplica os procedimentos
+                    editor.apply();
+
+                    //inclui as normas de audio no arquivo de persistência
+                    com_som = som.getString("Audio ativado", "com audio");
                 }
 
             }

@@ -214,19 +214,19 @@ public class AnyGenderFriends extends AppCompatActivity {
                 //criar um switch checando idiomas e inserir as devidas funções
 
                 //variável que nomina a sigla do idioma português
-                idioma_portugues = "pt";
+                idioma_portugues = getResources().getString(R.string.idioma_portugues);
 
                 //variável que obter o valor boleano do idioma português
                 se_idioma_portugues = Locale.getDefault().getLanguage().equals(idioma_portugues);
 
                 //variável que nomina a sigla do idioma coreano
-                idioma_coreano = "ko";
+                idioma_coreano = getResources().getString(R.string.idioma_coreano);
 
                 //variável que obter o valor boleano do idioma coreano
                 se_idioma_coreano = Locale.getDefault().getLanguage().equals(idioma_coreano);
 
                 //variável que nomina a sigla do idioma inglês
-                idioma_ingles = "en";
+                idioma_ingles = getResources().getString(R.string.idioma_ingles);
 
                 //variável que obter o valor boleano do idioma inglês
                 se_idioma_ingles = Locale.getDefault().getLanguage().equals(idioma_ingles);

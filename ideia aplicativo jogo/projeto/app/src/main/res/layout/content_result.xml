@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/result_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textFontWeight="bold"
+        android:fontFamily="@font/looneytunes"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:text="@string/label_results" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/galinha_final"
+        />
+
+    <TextView
+        android:textAlignment="center"
+        android:id="@+id/resultadofinalinicial"
+        android:textFontWeight="bold"
+        android:fontFamily="@font/indieflower"
+        android:layout_width="match_parent"
+        android:layout_marginTop="300sp"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textSize="22sp"
+        android:text="TextView" />
+
+    <ImageButton
+        android:id="@+id/bt_salvar"
+        android:layout_marginTop="420dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/button_save"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_salvar" />
+
+    <ImageButton
+        android:id="@+id/bt_compartilhar_resultado"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/button_back"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_menu_share" />
+
+
+
+    <ImageButton
+        android:id="@+id/bt_sair_do_jogo"
+        android:layout_marginTop="580dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/button_play"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_close_vector" />
+
+</RelativeLayout>

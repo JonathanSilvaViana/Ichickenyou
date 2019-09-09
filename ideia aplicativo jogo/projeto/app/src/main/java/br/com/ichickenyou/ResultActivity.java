@@ -30,7 +30,7 @@ public class ResultActivity extends AppCompatActivity {
     Bundle agrupador;
     SharedPreferences som;
     String resultado_campo_original, preferencia_som, ativo, desativado;
-    ImageButton bt_salvar, bt_compartilhar_resultado;
+    ImageButton bt_salvar, bt_compartilhar_resultado, bt_sair_do_jogo;
     AlertDialog.Builder builder;
     AlertDialog dialog;
     String[] NomeListaRedesSociais;
@@ -38,6 +38,7 @@ public class ResultActivity extends AppCompatActivity {
     pl.droidsonroids.gif.GifImageView galinha_final;
     Calendar calendario;
     int dia_da_semana;
+    private Intent encerra_resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +101,18 @@ public class ResultActivity extends AppCompatActivity {
             public void onClick(View v) {
                 acionaCompartilhar();
             }
+        });
+
+        //variável de instancia que encontra o botão de encerrar
+        bt_sair_do_jogo = (ImageButton)findViewById(R.id.bt_sair_do_jogo);
+
+        //aciona o metodo que encerra o resultado
+        bt_sair_do_jogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                encerraResultado();
+            }
+
         });
 
 
@@ -227,6 +240,7 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
+    //metódo que nomeia o campo onde o resultado deve ser inserido
     private void nomeiaTextView()
     {
         //busca o dado da activity anterior por meio de um indice tipo string e uma string com os dados
@@ -234,6 +248,20 @@ public class ResultActivity extends AppCompatActivity {
                agrupador.get("resultado");
        //nomeia o campo de resultado original
        resultadofinalinicial.setText(resultado_campo_original);
+    }
+
+    //metodo usado para encerrar a activity de resultados
+    private void encerraResultado()
+    {
+        //cria o intent para sair da activy
+        encerra_resultado = new Intent(this, MenuActivity.class);
+        //gera a activity que destina o contexto
+        startActivity(encerra_resultado);
+
+        //chama e invoca os eventos de animação
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
+        //encerra a activity
+        finish();
     }
 
     @Override

@@ -5,6 +5,11 @@
     <string name="mensagememail">Por gentileza, descreva detalhadamente todos detalhes do bug encontrado.</string>
     <string name="enunciadointentbug">Escolha um cliente de e-mail para prosseguir</string>
 
+    <!--idiomas-->
+    <string name="idioma_portugues">pt</string>
+    <string name="idioma_coreano">ko</string>
+    <string name="idioma_ingles">en</string>
+
     <!--nomes das redes sociais-->
 
     <string-array name="redes_sociais">
