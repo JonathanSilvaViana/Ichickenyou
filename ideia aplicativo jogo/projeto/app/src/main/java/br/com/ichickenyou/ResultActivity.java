@@ -18,6 +18,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import java.util.Calendar;
 
@@ -29,7 +31,7 @@ public class ResultActivity extends AppCompatActivity {
     Intent coleta_acitivity_anterior;
     Bundle agrupador;
     SharedPreferences som;
-    String resultado_campo_original, preferencia_som, ativo, desativado;
+    String resultado_campo_original, preferencia_som, ativo, desativado, data_do_dia;
     ImageButton bt_salvar, bt_compartilhar_resultado, bt_sair_do_jogo;
     AlertDialog.Builder builder;
     AlertDialog dialog;
@@ -39,6 +41,8 @@ public class ResultActivity extends AppCompatActivity {
     Calendar calendario;
     int dia_da_semana;
     private Intent encerra_resultado;
+    SimpleDateFormat data_atual;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +69,15 @@ public class ResultActivity extends AppCompatActivity {
 
         //váriavel que adquire o dia da semana a partir de calendário
         dia_da_semana = calendario.get(Calendar.DAY_OF_WEEK);
+
+        //ao clicar na galinha, ela repetirá o som
+        galinha_final.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //caso esteja habilitado, reproduzirá som, mas de forma não mutua ou repetiva enquanto estiver sendo executado
+                comSom();
+            }
+        });
 
         //função que coleta da activity anterior
         if (agrupador != null)
@@ -115,6 +128,8 @@ public class ResultActivity extends AppCompatActivity {
 
         });
 
+        //pega a data atual por meio do método invocado abaixo
+        pegaDataAtual();
 
     }
 
@@ -156,6 +171,8 @@ public class ResultActivity extends AppCompatActivity {
         dialog = builder.create();
         dialog.show();
     }
+
+
 
     public void diaDasemana()
     {
@@ -248,6 +265,19 @@ public class ResultActivity extends AppCompatActivity {
                agrupador.get("resultado");
        //nomeia o campo de resultado original
        resultadofinalinicial.setText(resultado_campo_original);
+    }
+
+
+    //metodo que obtem a data do dia atual
+    public void pegaDataAtual()
+    {
+        //cria o estilo da data
+        data_atual = new SimpleDateFormat("dd.MM.yyyy");
+        //converte a data em uma string
+        data_do_dia = data_atual.format(
+                new Date()
+        );
+        Toast.makeText(this, data_do_dia, Toast.LENGTH_SHORT).show();
     }
 
     //metodo usado para encerrar a activity de resultados
