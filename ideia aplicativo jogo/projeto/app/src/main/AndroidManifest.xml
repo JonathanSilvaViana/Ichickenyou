@@ -18,10 +18,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultActivity"
+        <activity android:name=".WebViewActivity"
             android:screenOrientation="portrait"
+            android:parentActivityName=".ResultActivity" />
+        <activity
+            android:name=".ResultActivity"
             android:parentActivityName=".GenderActivity"
-            />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AnyGenderFriends"
             android:parentActivityName=".GenderActivity"

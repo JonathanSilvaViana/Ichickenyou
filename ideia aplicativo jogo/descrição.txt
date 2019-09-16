@@ -31,3 +31,4 @@ https://proandroiddev.com/replace-progressdialog-with-a-progress-button-in-your-
 https://devtalk.kakao.com/t/kakao-web-url-to-share-a-link-in-either-kakao-talk-kakao-story-also-okay/25801 --> lib share kakao
 https://commons.apache.org/proper/commons-lang/javadocs/api-3.6/org/apache/commons/lang3/StringUtils.html --> lib de manipular strings em java fácilmente
 https://www.techiediaries.com/android-room-tutorial/ --> como usar o room
+https://acomputerengineer.wordpress.com/2018/12/18/room-sqlite-demo-with-crud-operations-in-android/ --> tutorial de crud com room
