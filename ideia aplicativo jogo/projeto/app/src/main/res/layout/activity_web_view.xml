@@ -4,28 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:orientation="vertical"
     tools:context=".WebViewActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <WebView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:id="@+id/webView">
-    </WebView>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="577dp" />
+        <include
+            layout="@layout/content_activity_web_view"
+            />
+
+    </ScrollView>
+
 </LinearLayout>

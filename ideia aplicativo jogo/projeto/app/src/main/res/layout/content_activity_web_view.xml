@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:gravity="center_vertical|center_horizontal"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/campo_texto_compartilhar_wevbivew_activity"
+        tools:layout_editor_absoluteX="168dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/looneytunes"
+        android:text="@string/bt_share_text"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textFontWeight="bold"
+        android:textSize="25dp" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"></WebView>
+
+    <Button
+        android:id="@+id/fecharWebViewActivity"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="577dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_play"
+        android:fontFamily="@font/looneytunes"
+        android:text="@string/bt_close_text"
+        android:textColor="#fff"
+        android:textFontWeight="bolder"
+        android:textSize="0.2in"
+        android:shadowDx="-1"
+        android:shadowDy="5"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:shadowRadius="10"
+        />
+
+</LinearLayout>

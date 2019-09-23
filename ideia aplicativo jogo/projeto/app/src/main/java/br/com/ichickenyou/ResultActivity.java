@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Handler;
 import android.os.Process;
 import android.support.v7.app.AlertDialog;
@@ -28,7 +30,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class ResultActivity extends AppCompatActivity {
 
     TextView resultadofinalinicial;
-    Intent coleta_acitivity_anterior;
+    Intent coleta_acitivity_anterior, webviewSocial;
     Bundle agrupador;
     SharedPreferences som;
     String resultado_campo_original, preferencia_som, ativo, desativado, data_do_dia;
@@ -42,6 +44,8 @@ public class ResultActivity extends AppCompatActivity {
     int dia_da_semana;
     private Intent encerra_resultado;
     SimpleDateFormat data_atual;
+    ConnectivityManager conexao;
+    NetworkInfo informacao_de_rede;
 
 
     @Override
@@ -153,6 +157,10 @@ public class ResultActivity extends AppCompatActivity {
                     case 0:
                         Toast.makeText(ResultActivity.this, R.string.Twitter, Toast.LENGTH_SHORT).show();
                         Log.d("Escolheu twitter", getResources().getString(R.string.Twitter));
+
+                        //aciona o método que checa a conexão antes de permitir compartilhar
+                        ChecaConexaoParaCompartilhar();
+
                         break;
                     //Kakao
                     case 1:
@@ -291,6 +299,56 @@ public class ResultActivity extends AppCompatActivity {
         //chama e invoca os eventos de animação
         overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_left);
         //encerra a activity
+        finish();
+    }
+
+
+    //metodo usado para checar a conexão no aplicativo antes de compartilhar o resultado na rede social
+    public void ChecaConexaoParaCompartilhar()
+    {
+
+        //variável que permite checar a conectividade em base do contexto da aplicação
+        conexao = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        //variável que permite checar a informação de rede
+        informacao_de_rede = conexao.getActiveNetworkInfo();
+
+        //usando a variável conexão em um método condicional
+        if(informacao_de_rede != null)
+        {
+
+            //condicional que permite checar a conexão
+
+            if (informacao_de_rede.getType() == ConnectivityManager.TYPE_WIFI)
+            {
+                acionaActivityCompartilhar();
+            }
+
+            else if (informacao_de_rede.getType() == ConnectivityManager.TYPE_MOBILE)
+            {
+                acionaActivityCompartilhar();
+            }
+            else {
+
+                Toast.makeText(this, "Sem conexão", Toast.LENGTH_SHORT).show();
+                Log.d("Rede Offline", "Não está conectado");
+
+            }
+        }
+
+        else {
+
+            Toast.makeText(this, "Conexão nula", Toast.LENGTH_SHORT).show();
+            Log.d("Rede nula", "Não está conectado, nula");
+
+        }
+
+    }
+
+    public void acionaActivityCompartilhar()
+    {
+        webviewSocial = new Intent(ResultActivity.this, WebViewActivity.class);
+        startActivity(webviewSocial);
         finish();
     }
 
