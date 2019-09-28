@@ -37,6 +37,7 @@ public class HomeFragment extends Fragment {
     MediaPlayer mp;
     Intent jogocomeca, entra_configuracao;
     Button play;
+    View conteudo_include_home;
     Typeface fonte_coreana;
     String idioma_coreano, outros_idiomas, caminho_aceito, ativo, desativado, preferencia_som;
     SharedPreferences som, aceite;
@@ -97,6 +98,9 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //encontra o include de home
+        conteudo_include_home = view.findViewById(R.id.include_home_content);
+
         //botão de iniciar jogo
         play = (Button)view.findViewById(R.id.button);
 
@@ -106,6 +110,8 @@ public class HomeFragment extends Fragment {
         caminho_aceito = "ACEITO";
         //busca o nome da variável de persistência informada tida como verdadeira
         aceite.getBoolean(caminho_aceito, true);
+
+
 
         //evento de click sob o botão de play
         play.setOnClickListener(new View.OnClickListener() {
@@ -170,6 +176,9 @@ public class HomeFragment extends Fragment {
                                                                              .addToBackStack(null)
                                                                              .commit();
                                                                      getActivity().getFragmentManager().popBackStack();
+
+                                                                     //evita que o conteúdo de home seja visualizado enquanto troca de fragments, escondendo o layout
+                                                                     conteudo_include_home.setVisibility(View.GONE);
                                                                  }
 
                                                              },
