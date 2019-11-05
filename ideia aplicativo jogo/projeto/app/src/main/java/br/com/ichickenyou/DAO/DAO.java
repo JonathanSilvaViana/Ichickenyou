@@ -12,20 +12,20 @@ public class DAO {
 
     public interface ItemDAO
     {
-//        @Insert
-//        public void insert(Item ... resultados);
-//
-//        @Update
-//        public void update(Item ... resultados);
-//
-//        @Delete
-//        public void delete(Item ... resultado);
-//
-//        @Query("SELECT * FROM resultados")
-//        public List<Item> getItems();
-//
-//        @Query("SELECT * FROM resultados WHERE id_resultado = :id")
-//        public Item getItemById(Long id);
+        @Insert
+        public void insert(Item ... resultados);
+
+        @Update
+        public void update(Item ... resultados);
+
+        @Delete
+        public void delete(Item ... resultado);
+
+        @Query("SELECT * FROM resultados")
+        public List<Item> getItems();
+
+        @Query("SELECT * FROM resultados WHERE id_resultado = :id")
+        public Item getItemById(Long id);
     }
 
 }

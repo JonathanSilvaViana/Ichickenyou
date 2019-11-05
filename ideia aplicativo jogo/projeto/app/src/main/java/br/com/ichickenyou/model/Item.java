@@ -10,11 +10,11 @@ import java.util.Date;
 
 public class Item {
 
-//    @PrimaryKey
-//    @NonNull private long id_resultado;
-//    private String campo_resultado_salvo;
-//    private Date data_de_criacao;
-//    private Boolean origem;
-//    private Boolean compartilhado;
+    @PrimaryKey
+    @NonNull private long id_resultado;
+    private String campo_resultado_salvo;
+    private Date data_de_criacao;
+    private Boolean origem;
+    private Boolean compartilhado;
 
 }
