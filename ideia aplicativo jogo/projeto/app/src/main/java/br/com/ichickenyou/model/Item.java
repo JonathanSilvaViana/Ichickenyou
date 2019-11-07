@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 
 import java.util.Date;
 
-//@Entity(tableName = "resultados")
+@Entity(tableName = "resultados")
 
 public class Item {
 

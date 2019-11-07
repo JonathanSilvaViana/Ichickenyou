@@ -1,0 +1,43 @@
+figura 1 - Resultados da pergunta relacionada se o usuário gosta de utilizar aplicativos - 24
+Figura 2: Entrevistados responderam qual tipo característica de aplicativo preferem. - 25
+Figura 3: Questionamento sobre a premissa quanto a brincadeiras culturais que podem estão desaparecendo. - 26
+Figura 4: De acordo com o mercado consumidor em geral, 58,3% possuem um grau de aceitação neutro quanto a aplicativos categorizados como "humor", visto que 25% das respostas incluem uma resposta positiva e 16,7% como resposta negativa a premissa de humor. 26
+Figura 5: A maioria dos entrevistados do público alvo confirmam que elementos da cultura brasileira podem ser mais conhecidos internacionalmente por meio de tradução de idiomas. - 27
+Figura 6: O título da pergunta foi: “Acredita que a desinstalação de aplicativos de certa forma poderia ser um recurso implantado nos próprios apps, visto que pode ser uma alternativa liberar espaço do aparelho?” - 28
+Figura 7: Exemplo de espaço ocupado pelo aplicativo I Chicken You em um dispositivo executando o sistema operacional móvel Android 4.4 KitKat. - 29
+Figura 8: Pesquisa inerente a animações e sons - 29
+Figura 9: Ilustração do organograma no contexto da aplicação. 31
+Figura 10: Detalhes sobre o aplicativo "Teste de amor para casais com brincadeira" do grupo TPGT Team. 37
+Figura 11: Imagem que ilustra a indisponibilidade do web site dos desenvolvedores. 38
+Figura 12: Logotipo da rede social Kakao - 39
+Figura 13: Logotipo da rede social Twitter - 39
+Figura 14: ilustração da área de execução de aplicativos, onde os aplicativos ficam em segundo plano minimizados quando uma vez abertos. 47
+Figura 15: Diagrama de caso de uso do aplicativo - 49
+Figura 16: Diagrama de classes do aplicativo I Chicken You - 52
+Figura 17: modelo conceitual de dados - 53
+Figura 18: Diagrama de sequência do cenário no qual o usuário abre o aplicativo 54
+Figura 19: Diagrama de sequência do cenário de "página inicial" do aplicativo, que contém sub views, uma vez iniciada após a animação da abertura do aplicativo. 54
+Figura 20: Nesta figura vemos o splash screen (tela de inicialização) do aplicativo 55
+Figura 21: Ilustração da página MenuActivity, executando o FragmentHome (usado na página inicial do aplicativo) ilustrando o inicio do aplicativo I Chicken You. 56
+Figura 22: Ilustração do menu contido na MenuActivity, onde é possível transitar por meio de opções que trocam o Fragment da aplicação. 56
+Figura 23: Activity de configurações de áudio, a ActivitySettings permite que a aplicação tenha som ou não sem interromper o áudio do sistema operacional, e também permite voltar a tela anterior assim como também permite relatar algum comportamento inesperado na aplicação por meio do botão em tom ciano que é ilustrado por um besouro branco. - 57
+Figura 24: Nesta figura é ilustrado o FragmentRules, que permite o usuário aceitar ou não os termos da aplicação uma vez que após instalada pela loja de aplicativos, ou a partir do código fonte do aplicativo citado neste trabalho de conclusão de curso. Os termos podem ser lidos por meio de uma lista, e o usuário final pode aceitar os termos no botão do tipo “switch” da interface contida no Android Studio. Se for aceito, o usuário prossegue utilizar a aplicação após o clique no botão play do HomeFragment, caso contrário é realizado um procedimento de desinstalação do aplicativo.  58
+Figura 25: Nesta figura temos a ilustração do AboutFragment, que exibe um texto sobre o aplicativo I Chicken You. - 59
+Figura 26: Uma vez clicado na opção do menu  chamada "sair"  - 59
+Figura 27: Essa figura ilustra a execução da GenderActivity - 60
+Figura 28: Ilustra o layout e funcionamento padrão entre as classes MaleFriends 61
+Figura 29: Indica na imagem a criação de um formulário genérico durante a execução do recurso citado na imagem acima desta. 62
+Figura 30: Uma vez quando pelo menos o usuário final (enunciado de onde compartilhar) 63
+Figura 31: Amostra da interface no idioma coreano, 64
+Figura 32: Figura representando a interface inglesa 64
+Figura 33: Figura que ilustra a funcionalidade de salvar o resultado que pode ser opcionalmente salvo na aplicação 65
+
+Figura 34: Essa figura exibe a manipulação de resultados salvos 66
+Figura 35: À esquerda, temos o login da rede social Kakao Story  66
+Figura 36: Ilustração que representa o diagrama de estados do aplicativo I Chicken You. 67
+Figura 37: Processos do aplicativo I Chicken You exibidos no diagrama de atividades. 68
+Figura 38: diagrama de componentes ilustrado na imagem acima. 69
+Figura 39: Gráfico de transição de dados durante a execução do aplicativo I Chicken You 70
+Figura 40: Tabela resultados ilustrando as inerentes características. 70
+Figura 41: Diagrama de implantação ilustrado na imagem acima. 71
+
